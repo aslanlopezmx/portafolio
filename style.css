@@ -273,7 +273,7 @@ body {
     width: 100%;
     max-width: 400px;
     aspect-ratio: 1 / 1;
-    background-image: url('/assets/spritesheet.png');
+    background-image: url('./assets/spritesheet.png');
     background-size: 500% 100%; 
     background-position: 0 0;
     background-repeat: no-repeat;

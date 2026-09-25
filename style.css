@@ -1,0 +1,1039 @@
+/*todo =================== NAVBAR ==========================*/
+/*todo =================== NAVBAR ==========================*/
+/*todo =================== NAVBAR ==========================*/
+
+
+/* selector general - reset de caja, márgenes, padding y fuente global */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* cuerpo de la pagina - altura minima y desbordamiento */
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+/* navbar - contenedor flexible, alineacion, ancho maximo y margen, fija, con fondo, centrada y por encima del contenido */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* Configuración para fijar y centrar */
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;  
+    /* Fondo y espaciado para evitar transparencias al hacer scroll */
+    background-color: #000000;
+    padding: 20px 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/*logo aslanlopezmx - tamaño y proporcion */
+.logo-text img {
+    max-height: 40px; 
+    width: auto;        
+    display: block;
+}
+
+/* oculta checkbox y etiqueta del menu en escritorio - visualizacion nula */
+.menu-checkbox, .menu-icon {
+    display: none;
+}
+
+/* lineas de icono "hamburguesa" - visualizacion en bloque, dimensiones, color, transicion y radio */
+.menu-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin-bottom: 5px;
+    transition: .33s;
+    border-radius: 50px;
+}
+
+
+
+/* enlaces de navegacion - visualizacion flexible, espacio y lista sin viñetas */
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+/* enlace individual de navegacion - color de texto, decoracion, tamaño, grosor y transicion */
+.nav-links a {
+    color: #dadada;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+
+/* enlace individual de navegacion al pasar el cursor - cambio de color de texto */
+.nav-links a:hover {
+    color: #ffffff;
+    
+}
+
+
+
+/* boton de llamada a la accion - fondo degradado, color, bordes, padding, radio, pre ajustes para hover cursor y sombra */
+.cta-btn {
+    background: linear-gradient(135deg, #072879, #a80c4b, #37126b, #a80c4b, #072879, #a80c4b, #37126b);
+    background-size: 700% 700%; 
+    color: white;
+    border: none;
+    padding: 8px 22px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 
+    0 1px 5px #072879;
+    transition: all .5s ease;  
+}
+
+
+/**Animacion para movimiento fluido de gradiente*/
+@keyframes mi-bucle {
+    0% {
+        background-position: 0% 0%;
+    }
+    14% {
+        background-position: 14% 0%;
+    }
+    28% {
+        background-position: 28% 0%;
+    }
+    42%{
+        background-position: 42% 0%;
+    }
+    56%{
+        background-position: 56% 0%;
+    }
+    70%{
+        background-position: 70% 0%;
+    }
+    84%{
+        background-position: 84% 0%;
+    }
+    100%{
+        background-position: 100% 0%;
+    }
+}
+
+/**Hover de boton con animacion de grdiente - animacion en bucle, tamaño y sombra*/
+.cta-btn:hover{
+    animation: mi-bucle 2s ease-in-out infinite; 
+    transform: scale(1.2);
+    box-shadow: 0px 5px 20px #37126b;
+}
+
+/* diseño responsivo para pantallas pequeñas - reorganizacion de barra de navegacion y menu desplegable*/
+@media (max-width: 768px) {
+    /* navbar - layout de fila, distribucion de espacio lateral y padding */
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 20px;
+    }
+
+    /* mostrar icono hamburguesa en movil - visualizacion en bloque y cursor */
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    /* menu desplegable - posicion absoluta inferior, oculto a la izquierda, ancho total, fondo, columna y transicion */
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: -100%;
+        width: 35%;
+        background-color: #000000;
+        flex-direction: column;
+        gap: 0;
+        transition: left .33s ease;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+        
+    }
+
+    /* enlaces individuales de menu movil - visualizacion en bloque, padding, alineacion y borde inferior */
+    .nav-links a {
+        display: block;
+        padding: 15px 20px;
+        text-align: center;
+        border-bottom: 1px solid rgba(94, 234, 212, 0.1);
+    }
+
+    /* mostrar menu desplegable al marcar checkbox - desplazamiento horizontal a cero */
+    .menu-checkbox:checked ~ .nav-links {
+        left: 0;
+    }
+
+    /* animar linea superior de hamburguesa a cruz - rotacion y desplazamiento Y */
+    .menu-checkbox:checked + .menu-icon span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    /* ocultar linea central de hamburguesa - opacidad cero */
+    .menu-checkbox:checked + .menu-icon span:nth-child(2) {
+        opacity: 0;
+    }
+
+    /* animar linea inferior de hamburguesa a cruz - rotacion inversa y desplazamiento Y */
+    .menu-checkbox:checked + .menu-icon span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* texto de logo en movil - reduccion de tamaño de fuente */
+    .logo-text {
+        font-size: 12px;
+    }
+
+    /* boton cta en movil - reduccion de padding y tamaño de fuente */
+    .cta-btn {
+        padding: 6px 14px;
+        font-size: 12px;
+    }
+
+}
+
+/*todo =================== HERO ==========================*/
+/*todo =================== HERO ==========================*/
+/*todo =================== HERO ==========================*/
+
+/* seccion de inicio - fondo degradado, posicion, padding y radio de borde */
+.hero-section {
+    background: linear-gradient(135deg, #010613, #14002d, #23020f, #09021d, #0a0017, #14002d, #03002d);
+    
+    background-size: 700% 700%; 
+    position: relative;
+    padding: 20px 50px 80px 50px;
+}
+
+.hero-section:hover{
+    animation: mi-bucle 3s ease-in-out infinite; 
+    
+
+}
+
+/* contenido de inicio - ancho maximo, margen, cuadricula de dos columnas y espacio */
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    margin-top: 120px; /* Empuja el contenido hacia abajo */
+}
+/* titulo principal de inicio - tamaño de fuente, grosor, altura de linea, espaciado, margen y color */
+.hero-text h1 {
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+/* parrafo de inicio - tamaño de fuente, color, espaciado, margen y transformacion a mayusculas */
+.hero-text p {
+    font-size: 14px;
+    color: #94a3b8;
+    letter-spacing: 0.5px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* contenedor de imagen de inicio - posicion relativa, visualizacion flexible y centrado */
+.hero-image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden; 
+    padding: 10px;
+}
+
+/*Contenedor con spritesheet de fondo, ajustes para ajustar tamaño, borde, sombra, */
+.stop-motion-container {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1 / 1;
+    background-image: url('/assets/spritesheet.png');
+    background-size: 500% 100%; 
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    border-radius: 50%; 
+    box-shadow: 5px 0px 30px rgba(0, 0, 0, 0.4);
+    transition: background-position .5s steps(4),
+                box-shadow ease 1s;
+    cursor: none;
+}
+
+/* Hover de stop motion imagen de perfil*/
+.stop-motion-container:hover {
+   background-position: 100% 0;
+    box-shadow: 20px 5px 20px #00000080;
+}
+
+
+/*todo =================== TECNOLOGÍAS ===========================*/
+/*todo =================== TECNOLOGÍAS ===========================*/
+/*todo =================== TECNOLOGÍAS ===========================*/
+
+/* seccion de contenido explicativo - color de fondo, color de texto y padding */
+.content-section {
+    background-color: #f1f8fa;
+    color: #0f172a;
+    padding: 60px 50px;
+}
+
+/* contenedor interno de contenido - ancho maximo y margen */
+.content-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* subtitulo de contenido - tamaño de fuente, grosor, margen inferior y color */
+.content-inner h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-align: center;
+    color: #0d3844;
+}
+
+/* parrafo de contenido - tamaño de fuente, color, ancho maximo y altura de linea */
+.content-inner p {
+    font-size: 14px;
+    color: #475569;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* diseño responsivo para hero contenido */
+
+@media (max-width: 768px) {
+    
+
+    /* contenido de inicio - cuadricula de una columna, alineacion centrada y margen superior ajustado */
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    /* seccion de tecnologías - reduccion de padding lateral */
+    .content-section {
+        padding: 40px 20px;
+    }
+}
+
+/*todo ================== SOBRE MÍ ===========================*/
+/*todo ================== SOBRE MÍ ===========================*/
+/*todo ================== SOBRE MÍ ===========================*/
+
+
+/* tarjeta sobre mí - color de fondo, padding, borde superior y color de texto */
+.sobremi-card {
+    background-color: #000000;
+    padding: 60px 40px;
+    color: #ffffff;
+}
+
+/* titulo de sobre mí - tamaño de fuente, grosor, alineacion, margen inferior, espaciado y color */
+.sobremi-title {
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+}
+
+/* contenido principal de sobre mí - ancho maximo, margen, cuadricula de tres columnas, espacio y alineacion */
+.sobremi-main-content {
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
+    display: grid;
+    grid-template-columns: 220px 1fr 280px;
+    gap: 25px;
+    align-items: center;
+}
+
+/* barra lateral de sobre mí - visualizacion flexible en columna y espacio */
+.sobremi-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* boton pill de sobre mí - color de fondo, color de texto, borde, padding, radio, tamaño de fuente, grosor, alineacion, cursor y transicion */
+.sobremi-pill {
+    background: #0b055a;
+    color: #cbd5e1;
+    border: 1px solid #ffffff;
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* boton pill al pasar el cursor o activo - color de fondo, color de texto, color de borde, grosor de fuente y sombra */
+.sobremi-pill:hover {
+    background: #6c98ff;
+    color: #06181f;
+    border-color: #5eead4;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(94, 234, 212, 0.3);
+}
+
+/* visor de sobre mí- color de fondo, radio de borde, borde, desbordamiento oculto, posicion relativa*/
+.sobremi-viewport {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+/* barra de ventana - color de fondo, padding y espacio */
+.window-bar {
+    background: #0a0532;
+    padding: 10px 15px;
+    display: flex;
+    gap: 6px;
+}
+
+/* punto de ventana - ancho, altura, radio circular y color de fondo */
+.window-bar .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #6a0c62;
+}
+
+/* pantalla de visor - posicion relativa, ancho y altura fija */
+.viewport-screen {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    background: #080347; /* Fondo oscuro integrado para el texto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo añadido para el contenido de texto dentro del visor */
+.viewport-text-content {
+    padding: 30px;
+    color: #ffffff;
+    text-align: left;
+    width: 100%;
+}
+
+.viewport-text-content h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.viewport-text-content p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #cbd5e1;
+    margin: 0;
+}
+
+/* miniatura de realidad aumentada - color de fondo, radio de borde, borde, desbordamiento oculto, posicion relativa, altura y sombra */
+.sobremi-thumbnail {
+    background: #092028;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    position: relative;
+    height: 220px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* imagen de miniatura - ancho, altura y ajuste de objeto */
+.sobremi-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* elementos graficos superpuestos verdes - posicion absoluta, ancho, altura, borde y desactivacion de eventos de puntero */
+.sobremi-overlay {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #6a0c62;
+    pointer-events: none;
+}
+
+/* esquina superior izquierda de superposicion - posicion superior izquierda y eliminacion de bordes derecho e inferior */
+.bracket-tl {
+    top: 15px;
+    left: 15px;
+    border-right: none;
+    border-bottom: none;
+}
+
+/* esquina inferior derecha de superposicion - posicion inferior derecha y eliminacion de bordes izquierdo y superior */
+.bracket-br {
+    bottom: 15px;
+    right: 15px;
+    border-left: none;
+    border-top: none;
+}
+
+/* etiqueta de interfaz de usuario de realidad aumentada - posicion absoluta, superior derecha, fondo, color, borde, padding, tamaño de fuente, fuente monoespaciada, radio y espaciado de letras */
+.sobremi-ui-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #06181fd9;
+    color: #548aff;
+    border: 1px solid #4c85ff;
+    padding: 4px 8px;
+    font-size: 10px;
+    font-family: monospace;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    z-index: 2;
+}
+
+/* pie de pagina de realidad aumentada - alineacion de texto, tamaño de fuente, espaciado de letras, color, transformacion a mayusculas, margen superior y grosor de fuente */
+.sobremi-footer {
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #64748b;
+    text-transform: uppercase;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+/* diseño responsivo para pantallas medianas - cambio a una columna y reorganizacion de barra lateral y botones */
+@media (max-width: 900px) {
+    .sobremi-main-content {
+        grid-template-columns: 1fr;
+    }
+    .sobremi-sidebar {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .sobremi-pill {
+        flex: 1;
+        min-width: 130px;
+        text-align: center;
+    }
+}
+
+
+/*todo ================== PROYECTOS ===========================*/
+/*todo ================== PROYECTOS ===========================*/
+/*todo ================== PROYECTOS ===========================*/
+
+/* seccion de proyectos - color de fondo, padding y color de texto */
+.projects-section {
+    background: linear-gradient(135deg, #010613, #14002d, #23020f, #09021d, #0a0017, #14002d, #03002d);
+    background-size: 700% 700%; 
+    position: relative;
+    padding: 80px 40px;
+    color: #ffffff;
+}
+
+/*hover de proyectos, animacion de gradiente*/
+.projects-section:hover{
+     animation: mi-bucle 3s ease-in-out infinite; 
+}
+
+/* contenedor de proyectos - ancho maximo y margen */
+.projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* titulo de proyectos - tamaño de fuente, grosor, alineacion, margen inferior y color */
+.projects-title {
+    font-size: 32px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+/* subtitulo de proyectos - tamaño de fuente, color, alineacion, espaciado de letras, transformacion a mayusculas y margen inferior */
+.projects-subtitle {
+    font-size: 13px;
+    color: #a2bbf6;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+/* cuadricula de proyectos - cuadricula de tres columnas y espacio */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* tarjeta de proyecto - color de fondo, radio de borde, borde, desbordamiento oculto, visualizacion flexible en columna y transicion de transformacion, sombra y borde */
+.project-card {
+    background: #0a0928;
+    border-radius: 12px;
+    border: 1px solid #ffffff14;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* tarjeta de proyecto al pasar el cursor - transformacion de elevacion, color de borde y sombra */
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(94, 148, 234, 0.4);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* imagen de proyecto - ancho completo, altura fija y desbordamiento oculto */
+.project-image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+/* imagen interior de proyecto - ancho, altura, ajuste de objeto y transicion */
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* imagen de proyecto al pasar el cursor sobre la tarjeta - efecto de zoom */
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+/* informacion de proyecto - padding, visualizacion flexible en columna y crecimiento flexible */
+.project-info {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* titulo de informacion de proyecto - tamaño de fuente, grosor, margen inferior y color */
+.project-info h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+/* parrafo de informacion de proyecto - tamaño de fuente, color, altura de linea, margen inferior y crecimiento flexible */
+.project-info p {
+    font-size: 13px;
+    color: #94a3b8;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+/* etiquetas de proyecto - visualizacion flexible, espacio, ajuste de linea y margen inferior */
+.project-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+/* etiqueta individual de proyecto - color de fondo, color de texto, tamaño de fuente, padding, radio de borde y fuente monoespaciada */
+.project-tags span {
+    background: #0d1844;
+    color: #5eb0ea;
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-family: monospace;
+}
+
+/* enlace de proyecto - color de texto, decoracion, tamaño de fuente, grosor, transicion y alineacion propia */
+.project-link {
+    color: #5ea2ea;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: color 0.2s;
+    align-self: flex-start;
+}
+
+/* enlace de proyecto al pasar el cursor - cambio de color de texto */
+.project-link:hover {
+    color: #ffffff;
+}
+
+/* diseño responsivo para pantallas medianas - cuadricula de dos columnas */
+@media (max-width: 900px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* diseño responsivo para pantallas pequeñas - cuadricula de una columna y ajuste de padding */
+@media (max-width: 600px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    .projects-section {
+        padding: 50px 20px;
+    }
+}
+
+/*todo ================== TRAYECTORIA ===========================*/
+/*todo ================== TRAYECTORIA ===========================*/
+/*todo ================== TRAYECTORIA ===========================*/
+
+/* seccion de experiencia - color de fondo, padding, borde superior y color de texto */
+.experience-section {
+    background-color: #ffffff;
+    padding: 80px 40px;
+    border-top: 1px solid rgba(94, 234, 212, 0.15);
+    color: #000000;
+}
+
+/* contenedor de experiencia - ancho maximo y margen */
+.experience-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* titulo de experiencia - tamaño de fuente, grosor, alineacion, margen inferior y color */
+.experience-title {
+    font-size: 32px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+/* subtitulo de experiencia - tamaño de fuente, color, alineacion, espaciado de letras, transformacion a mayusculas y margen inferior */
+.experience-subtitle {
+    font-size: 13px;
+    color: #404040;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+}
+
+/* linea de tiempo - posicion relativa y padding izquierdo */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+/* linea vertical de tiempo - contenido vacio, posicion absoluta, ubicacion, ancho y color de fondo */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 5px;
+    bottom: 5px;
+    width: 2px;
+    background: #000000;
+}
+
+/* elemento de linea de tiempo - posicion relativa y margen inferior */
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+/* ultimo elemento de linea de tiempo - eliminacion de margen inferior */
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* punto indicador de linea de tiempo - posicion absoluta, ubicacion, tamaño, radio circular, color de fondo, borde y sombra */
+.timeline-dot {
+    position: absolute;
+    left: -30px;
+    top: 5px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #06181f;
+    border: 2px solid #3c7bcd;
+}
+
+/* contenido de linea de tiempo - color de fondo, borde, radio de borde, padding y transicion de transformacion y borde */
+.timeline-content {
+    background: #030c30;
+    border: 3px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 25px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* contenido de linea de tiempo al pasar el cursor - color de borde y desplazamiento horizontal */
+.timeline-content:hover {
+    border-color: #740c8e;
+    transform: translateX(5px);
+}
+
+/* fecha de linea de tiempo - visualizacion en linea, tamaño de fuente, fuente monoespaciada, color de fondo, color de texto, padding, radio de borde y margen inferior */
+.timeline-date {
+    display: inline-block;
+    font-size: 11px;
+    font-family: monospace;
+    background: #3c75e140;
+    color: #ffffff;
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+/* titulo de contenido de linea de tiempo - tamaño de fuente, grosor, color y margen inferior */
+.timeline-content h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+/* empresa de linea de tiempo - tamaño de fuente, color, grosor de fuente, visualizacion en bloque y margen inferior */
+.timeline-company {
+    font-size: 13px;
+    color: #949db8;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* parrafo de contenido de linea de tiempo - tamaño de fuente, color, altura de linea y margen inferior */
+.timeline-content p {
+    font-size: 14px;
+    color: #cccbe1;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* etiquetas de linea de tiempo - visualizacion flexible, espacio y ajuste de linea */
+.timeline-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* etiqueta individual de linea de tiempo - color de fondo, color de texto, tamaño de fuente, padding, radio de borde, fuente monoespaciada y borde */
+.timeline-tags span {
+    background: #3c75e140;
+    color: #ffffff;
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-family: monospace;
+    border: 1px solid #eb0aff5e;
+}
+
+/* diseño responsivo para dispositivos moviles - ajuste de padding de seccion y linea de tiempo */
+@media (max-width: 768px) {
+    .experience-section {
+        padding: 50px 20px;
+    }
+    .timeline {
+        padding-left: 20px;
+    }
+}
+
+/*todo ================== EDUCACIÓN ===========================*/
+/*todo ================== EDUCACIÓN ===========================*/
+/*todo ================== EDUCACIÓN ===========================*/
+
+/* seccion de educacion - color de fondo, padding, borde superior y color de texto */
+.education-section {
+    background: linear-gradient(135deg, #010613, #14002d, #23020f, #09021d, #0a0017, #14002d, #03002d);
+    background-size: 700% 700%; 
+    position: relative;
+    padding: 80px 40px;
+    border-top: 1px solid rgba(94, 106, 234, 0.15);
+    color: #ffffff;
+}
+
+/* contenedor de educacion - ancho maximo y margen */
+.education-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* titulo de educacion - tamaño de fuente, grosor, alineacion, margen inferior y color */
+.education-title {
+    font-size: 32px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+/* subtitulo de educacion - tamaño de fuente, color, alineacion, espaciado de letras, transformacion a mayusculas y margen inferior */
+.education-subtitle {
+    font-size: 13px;
+    color: #7b67d1;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+/* cuadricula de educacion - cuadricula de dos columnas y espacio */
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* tarjeta de educacion - color de fondo, borde, radio de borde, padding, visualizacion flexible, espacio, alineacion y transicion de transformacion, borde y sombra */
+.education-card {
+    background: #0b0928;
+    border: 1px solid rgba(135, 0, 110, 0.08);
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* tarjeta de educacion al pasar el cursor - transformacion de elevacion, color de borde y sombra */
+.education-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(103, 94, 234, 0.4);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* icono de educacion - tamaño de fuente, color de fondo, dimensiones, radio de borde, centrado, borde y contraccion flexible */
+.education-icon {
+    font-size: 28px;
+    background: #1d144b;
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(145, 0, 137, 0.2);
+    flex-shrink: 0;
+}
+
+/* informacion de educacion - visualizacion flexible en columna y crecimiento flexible */
+.education-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* fecha de educacion - visualizacion en linea, tamaño de fuente, fuente monoespaciada, color de fondo, color de texto, padding, radio de borde, margen inferior y auto-alineacion */
+.education-date {
+    display: inline-block;
+    font-size: 11px;
+    font-family: monospace;
+    background: #311d9426;
+    color: #ffffff;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    align-self: flex-start;
+}
+
+/* titulo de informacion de educacion - tamaño de fuente, grosor, color y margen inferior */
+.education-info h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+/* institucion de educacion - tamaño de fuente, color, grosor de fuente, visualizacion en bloque y margen inferior */
+.education-institution {
+    font-size: 13px;
+    color: #94a3b8;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 12px;
+}
+
+/* parrafo de informacion de educacion - tamaño de fuente, color, altura de linea y margen inferior */
+.education-info p {
+    font-size: 13px;
+    color: #cbd5e1;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* etiquetas de educacion - visualizacion flexible, espacio y ajuste de linea */
+.education-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+/* etiqueta individual de educacion - color de fondo, color de texto, tamaño de fuente, padding, radio de borde, fuente monoespaciada y borde */
+.education-tags span {
+    background: #311d9426;
+    color: #fefefe;
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-family: monospace;
+    border: 1px solid #311d9426;
+}
+
+/* diseño responsivo para pantallas medianas - cuadricula de una columna */
+@media (max-width: 900px) {
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* diseño responsivo para pantallas pequeñas - padding, direccion en columna, espacio y dimensiones de icono */
+@media (max-width: 600px) {
+    .education-section {
+        padding: 50px 20px;
+    }
+    .education-card {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .education-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+    }
+}
+
+

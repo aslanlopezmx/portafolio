@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aslan Lopez</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!--todo =================== NAVBAR ==========================-->
+    <!--todo =================== NAVBAR ==========================-->
+    <!--todo =================== NAVBAR ==========================-->
+
+    <!-- navbar -->
+    <nav class="navbar">
+      <!-- checkbox oculto para el menu hamburguesa -->
+      <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
+
+      <!-- icono de menu hamburguesa -->
+      <label for="menu-toggle" class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <!-- logo -->
+      <a href="#" class="logo-container">
+        <div class="logo-text">
+          <img src="/assets/aslanlopezmx.png" alt="aslanlopezmx" />
+        </div>
+      </a>
+
+      <!-- links de navegacion -->
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobremi">Sobre mí</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#experience">Trayectoria</a></li>
+        <li><a href="#education">Educación</a></li>
+      </ul>
+
+      <!-- boton de llamada a la accion -->
+      <a href="https://www.linkedin.com/in/aslan-lopez/">
+        <button class="cta-btn">COLABORAR</button>
+      </a>
+    </nav>
+
+    <!--todo ===================== HERO =========================-->
+    <!--todo ===================== HERO =========================-->
+    <!--todo ===================== HERO =========================-->
+
+    <!-- seccion de inicio -->
+    <header class="hero-section" id="inicio">
+      <!-- contenido de inicio -->
+      <div class="hero-content">
+        <!-- texto de inicio -->
+        <div class="hero-text">
+          <h1>DESARROLLADOR<br />FULL STACK</h1>
+          <p>FRONT-END | BACK-END | CIBERSEGURIDAD</p>
+          <a href="https://www.linkedin.com/in/aslan-lopez/"
+            ><button class="cta-btn">COLABORAR</button></a
+          >
+        </div>
+
+        <!-- imagen en inicio -->
+        <div class="hero-image-container">
+          <!-- Contenedor para el efecto de Stop-Motion -->
+          <div class="stop-motion-container"></div>
+        </div>
+      </div>
+    </header>
+
+    <!--todo ================== TECNOLOGÍAS ===========================-->
+    <!--todo ================== TECNOLOGÍAS ===========================-->
+    <!--todo ================== TECNOLOGÍAS ===========================-->
+
+    <!-- seccion de explicacion cientifica -->
+    <section class="content-section">
+      <div class="content-inner">
+        <h2>TECNOLOGÍAS</h2>
+        <p>
+          Java | HTML5 | CSS3 | JavaScript | Git/Github | VSCode | IntelliJ Idea
+          | Eclipse | Linux | Apache | SQL | JSON | Spring | IA | Jira | Figma
+        </p>
+      </div>
+    </section>
+
+    <!--todo ================== SOBRE MÍ ===========================-->
+    <!--todo ================== SOBRE MÍ ===========================-->
+    <!--todo ================== SOBRE MÍ ===========================-->
+
+    <!-- seccion sobre mí -->
+    <div class="sobremi-card" id="sobremi">
+      <!-- titulo de realidad aumentada -->
+      <h1 class="sobremi-title">Sobre mí</h1>
+
+      <!-- contenido principal de sobre mí-->
+      <div class="sobremi-main-content">
+        <!-- barra lateral de controles -->
+        <div class="sobremi-sidebar">
+          <button class="sobremi-pill">Profesional</button>
+          <button class="sobremi-pill">Personal</button>
+          <button class="sobremi-pill">Pasatiempos e intereses</button>
+          <button class="sobremi-pill">Vision y futuro</button>
+        </div>
+
+        <!-- visor central -->
+        <div class="sobremi-viewport">
+          <div class="window-bar">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+          <div class="viewport-screen">
+            <!-- Modificado: Sustituida la imagen por un contenedor de texto con h2 y p -->
+            <div class="viewport-text-content">
+              <h2>Perfil Profesional</h2>
+              <p>
+                ¡Hola! Soy Aslan, Desarrollador Full Stack Junior. Fusiono mi
+                trayectoria en liderazgo y gestión comercial con un dominio
+                sólido en JavaScript, Java, HTML, CSS y el ecosistema de
+                desarrollo de extremo a extremo. Aplico metodologías ágiles e
+                Ingeniería de Software Sostenible para diseñar arquitecturas
+                eficientes. Me impulsa aprender cada día y transformar retos
+                lógicos en soluciones de alto rendimiento. ¡Conversemos!
+              </p>
+            </div>
+            <!-- overlays de sobre mí -->
+            <div class="sobremi-overlay bracket-tl"></div>
+            <div class="sobremi-overlay bracket-br"></div>
+            <div class="sobremi-ui-tag">Siempre aprendiendo</div>
+          </div>
+        </div>
+
+        <!-- miniatura derecha -->
+        <div class="sobremi-thumbnail">
+          <img src="/assets/proximamente.jpg" alt="Proximamente" />
+          <div
+            class="sobremi-overlay-green"
+            style="
+              top: 25px;
+              left: 25px;
+              width: 25px;
+              height: 25px;
+              border-right: none;
+              border-bottom: none;
+            "
+          ></div>
+        </div>
+      </div>
+
+      <!-- pie de pagina de sobre mí -->
+      <div class="sobremi-footer">Panorama completo</div>
+    </div>
+    <!--todo ================== PROYECTOS ===================-->
+    <!--todo ================== PROYECTOS ===================-->
+    <!--todo ================== PROYECTOS ===================-->
+
+    <!-- seccion de proyectos -->
+    <section class="projects-section" id="projects">
+      <div class="projects-container">
+        <h2 class="projects-title">Proyectos Destacados</h2>
+        <p class="projects-subtitle">Explora mi full stack y desarrollo web</p>
+
+        <div class="projects-grid">
+          <!-- card de proyectos -->
+          <div class="project-card">
+            <!-- imagen de proyecto -->
+            <div class="project-image">
+              <img src="/assets/proximamente.jpg" alt="Proyecto 1" />
+            </div>
+            <!-- informacion de proyecto -->
+            <div class="project-info">
+              <h3>Proyecto</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam,
+                sit error? Non tempore unde dolores fuga obcaecati vel cumque
+                facilis quas aut et animi sed porro, nihil voluptatum
+                consequuntur eius.
+              </p>
+              <!-- tags de proyecto -->
+              <div class="project-tags">
+                <span>-----</span>
+                <span>-----</span>
+                <span>-----</span>
+              </div>
+              <!-- enlace de proyecto -->
+              <a href="#" class="project-link">Ver Sitio &rarr;</a>
+            </div>
+          </div>
+
+          <!-- card de proyectos -->
+          <div class="project-card">
+            <!-- imagen de proyecto -->
+            <div class="project-image">
+              <img src="/assets/proximamente.jpg" alt="Proyecto 2" />
+            </div>
+            <!-- informacion de proyecto -->
+            <div class="project-info">
+              <h3>Proyecto</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae
+                deleniti aperiam voluptatem rem asperiores veritatis, recusandae
+                harum esse amet iusto numquam. Maxime dolores ut aspernatur eum
+                aperiam provident consequatur possimus?
+              </p>
+              <!-- tags de proyecto -->
+              <div class="project-tags">
+                <span>-----</span>
+                <span>-----</span>
+                <span>-----</span>
+              </div>
+              <!-- enlace de proyecto -->
+              <a href="#" class="project-link">Ver Sitio &rarr;</a>
+            </div>
+          </div>
+
+          <!-- card de proyectos -->
+          <div class="project-card">
+            <!-- imagen de proyecto -->
+            <div class="project-image">
+              <img src="/assets/proximamente.jpg" alt="Proyecto 3" />
+            </div>
+            <!-- informacion de proyecto -->
+            <div class="project-info">
+              <h3>Proyecto</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto,
+                labore voluptates inventore quos sapiente aperiam quaerat ex,
+                aliquid ipsam excepturi perferendis natus laborum ullam id
+                harum, quo repellendus tempora dignissimos!
+              </p>
+              <!-- tags de proyecto -->
+              <div class="project-tags">
+                <span>-----</span>
+                <span>-----</span>
+                <span>-----</span>
+              </div>
+              <!-- enlace de proyecto -->
+              <a href="#" class="project-link">Ver Sitio &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--todo ================== TRAYECTORIA ===================-->
+    <!--todo ================== TRAYECTORIA ===================-->
+    <!--todo ================== TRAYECTORIA ===================-->
+
+    <!-- seccion de experiencia -->
+    <section class="experience-section" id="experience">
+      <div class="experience-container">
+        <h2 class="experience-title">Trayectoria Profesional</h2>
+        <p class="experience-subtitle">
+          LIDERAZGO, ESTRATEGIA Y EVOLUCIÓN DE SOFTWARE
+        </p>
+
+        <!-- timeline de experiencia -->
+        <div class="timeline">
+          <!-- elemento de timeline -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <!-- contenido de timeline -->
+            <div class="timeline-content">
+              <span class="timeline-date">0000</span>
+              <h3>--------------------</h3>
+              <span class="timeline-company">--------------------</span>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Deserunt qui, similique, non sequi neque vel nostrum nemo fugiat
+                necessitatibus perspiciatis odio quia quo obcaecati commodi
+                nulla quos earum sed animi?
+              </p>
+              <div class="timeline-tags">
+                <span>-----</span>
+                <span>-----</span>
+                <span>-----</span>
+                <span>-----</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- elemento de timeline -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <!-- contenido de timeline -->
+            <div class="timeline-content">
+              <span class="timeline-date">00000</span>
+              <h3>--------------------</h3>
+              <span class="timeline-company">--------------------</span>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Doloremque soluta similique, eos magnam blanditiis esse. Quis
+                maxime ut consequatur at delectus nesciunt deleniti atque harum
+                vel, accusamus, necessitatibus provident dicta.
+              </p>
+              <div class="timeline-tags">
+                <span>-----</span>
+                <span>-----</span>
+                <span>-----</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- elemento de timeline -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <!-- contenido de timeline -->
+            <div class="timeline-content">
+              <span class="timeline-date">--------------------</span>
+              <h3>--------------------</h3>
+              <span class="timeline-company">--------------------</span>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Placeat voluptates nulla, repudiandae non similique assumenda
+                sit incidunt magni ut! Rem sint error sapiente vero fugiat nemo
+                incidunt commodi harum consectetur.
+              </p>
+              <div class="timeline-tags">
+                <span>-----</span>
+                <span>-----</span>
+                <span>-----</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--todo ================== EDUCACIÓN ===================-->
+    <!--todo ================== EDUCACIÓN ===================-->
+    <!--todo ================== EDUCACIÓN ===================-->
+
+    <!-- seccion de educacion -->
+    <section class="education-section" id="education">
+      <div class="education-container">
+        <h2 class="education-title">Eduación y certificaciones</h2>
+        <p class="education-subtitle">FORMACIÓN ACADÉMICA Y TÉCNICA</p>
+
+        <div class="education-grid">
+          <!-- card de educacion -->
+          <div class="education-card">
+            <div class="education-icon">-</div>
+            <div class="education-info">
+              <span class="education-date">0000</span>
+              <h3>------------------</h3>
+              <span class="education-institution">------------------</span>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero
+                et alias molestiae rem qui dicta suscipit consequatur
+                exercitationem, dolore illo illum autem veritatis tempore
+                voluptatum earum possimus aut tenetur accusantium?
+              </p>
+              <div class="education-tags">
+                <span>-----</span>
+                <span>-----</span>
+                <span>-----</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- card de educacion -->
+          <div class="education-card">
+            <div class="education-icon">-</div>
+            <div class="education-info">
+              <span class="education-date">0000</span>
+              <h3>------------------</h3>
+              <span class="education-institution">------------------</span>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Quaerat placeat beatae ad id dolorum cum excepturi nostrum
+                ducimus aliquam rem quas eius, molestiae sed maxime. Rem illum
+                ea ipsa minus!
+              </p>
+              <div class="education-tags">
+                <span>-----</span>
+                <span>-----</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- card de educacion -->
+          <div class="education-card">
+            <div class="education-icon">-</div>
+            <div class="education-info">
+              <span class="education-date">0000</span>
+              <h3>------------------</h3>
+              <span class="education-institution">------------------</span>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Doloremque, maxime quo? Officia quis quasi autem exercitationem
+                obcaecati. Quo, cum nemo. Quam ea expedita corrupti et officiis
+                enim possimus nobis placeat?
+              </p>
+              <div class="education-tags">
+                <span>-----</span>
+                <span>-----</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- card de educacion -->
+          <div class="education-card">
+            <div class="education-icon">-</div>
+            <div class="education-info">
+              <span class="education-date">0000</span>
+              <h3>------------------</h3>
+              <span class="education-institution">------------------</span>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                repudiandae, ex optio eius cumque aut corrupti impedit a!
+                Repudiandae magni asperiores commodi recusandae, mollitia ea
+                architecto vel iusto error amet.
+              </p>
+              <div class="education-tags">
+                <span>-----</span>
+                <span>-----</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

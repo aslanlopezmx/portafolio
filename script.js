@@ -47,8 +47,8 @@ let columna = 0;
 let selected;
 
 /*Creacion de constantes de audios*/
-const nav = new Audio("audio/nav.mp3");
-const A = new Audio("audio/A.mp3");
+const nav = new Audio("../audio/nav.mp3");
+const A = new Audio("./audio/A.mp3");
 const B = new Audio("audio/B.mp3");
 
 

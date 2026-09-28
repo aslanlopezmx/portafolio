@@ -46,6 +46,7 @@ let fila = 0;
 let columna = 0;
 let selected;
 
+/*Obtiene la ruta base del proyecto de forma dinámica, solución para obtener los recursos (audio o imagenes desde el script) */
 const basePath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
 
 /*Creacion de constantes de audios*/

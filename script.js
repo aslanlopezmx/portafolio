@@ -46,10 +46,19 @@ let fila = 0;
 let columna = 0;
 let selected;
 
+const basePath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
+
 /*Creacion de constantes de audios*/
-const nav = new Audio("audio/nav.mp3");
-const A = new Audio("audio/A.mp3");
-const B = new Audio("audio/B.mp3");
+const nav = new Audio(`${basePath}audio/nav.mp3`);
+const A = new Audio(`${basePath}audio/A.mp3`);
+const B = new Audio(`${basePath}audio/B.mp3`);
+
+
+
+
+
+
+
 
 
 /*Funcion que muestra la interfaz X en la pantalla, al inicio X es igual a 1, esta funcion, AL MISMO TIEMPO construye el contenido de LAS interfaces definidas con html, en css se cubren las clases correspondientes */
@@ -59,8 +68,8 @@ function mostrarPantalla(){
     /*Construccion de pagina */
     elFirst.innerHTML=
     "Sobre Mí";
-    elContent.innerHTML=
-    `<img id="lcdPic" src="assets/pixels.jpg">`;
+    elContent.innerHTML = 
+    `<img id="lcdPic" src="${basePath}assets/pixels.jpg">`;
     elGuide.innerHTML = 
     `<div class="lcdBtn"><b>A</b></div> Entrar`;
 

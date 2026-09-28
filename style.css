@@ -1,6 +1,4 @@
-/*todo =================== NAVBAR ==========================*/
-/*todo =================== NAVBAR ==========================*/
-/*todo =================== NAVBAR ==========================*/
+
 
 
 /* selector general - reset de caja, márgenes, padding y fuente global */
@@ -8,7 +6,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
 }
 
 /* cuerpo de la pagina - altura minima y desbordamiento */
@@ -16,6 +14,10 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
 }
+
+/*todo =================== NAVBAR ==========================*/
+/*todo =================== NAVBAR ==========================*/
+/*todo =================== NAVBAR ==========================*/
 
 
 /* navbar - contenedor flexible, alineacion, ancho maximo y margen, fija, con fondo, centrada y por encima del contenido */
@@ -291,16 +293,15 @@ body {
     background-position: 0 0;
     background-repeat: no-repeat;
     border-radius: 50%; 
-    box-shadow: 5px 0px 30px rgba(0, 0, 0, 0.4);
-    transition: background-position .5s steps(4),
-                box-shadow ease 1s;
+    
+    transition: background-position .5s steps(4);
     cursor: none;
 }
 
 /* Hover de stop motion imagen de perfil*/
 .stop-motion-container:hover {
    background-position: 100% 0;
-    box-shadow: 20px 5px 20px #00000080;
+    
 }
 
 
@@ -310,7 +311,7 @@ body {
 
 /* seccion de contenido explicativo - color de fondo, color de texto y padding */
 .content-section {
-    background-color: #f1f8fa;
+    background-color: #dcdfe3;
     color: #0f172a;
     padding: 60px 50px;
 }
@@ -367,212 +368,511 @@ body {
     }
 }
 
-/*todo ================== SOBRE MÍ ===========================*/
-/*todo ================== SOBRE MÍ ===========================*/
-/*todo ================== SOBRE MÍ ===========================*/
-
-
-/* tarjeta sobre mí - color de fondo, padding, borde superior y color de texto */
-.sobremi-card {
-    background-color: #000000;
-    padding: 60px 40px;
-    color: #ffffff;
+/*todo ============== SOBRE MÍ - LCD =======================*/
+/*todo ============== SOBRE MÍ - LCD =======================*/
+/*todo ============== SOBRE MÍ - LCD =======================*/
+/*Seccion sobre mí - color de fondo, pading, display y acomodo*/
+.display-section{
+   padding: 0px;
+   background-color: #dcdfe3;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   justify-content: center;
+   align-items: stretch;
+   align-content: stretch;
+}
+ /*Espacio que simula un "gameboy"- margin, padding, xolor de fondo, tamaño definido, border radius, sombra para neomorfismo y transicion*/
+.GAMEBOY{
+    margin-top: 130px;
+    margin-bottom: 100px;
+    padding: 35px;
+    background-color: #dcdfe3;
+    width: 800px;
+    height: 750px;
+    border-radius: 50px 50px 100px 20px;
+    display: block;
+    box-shadow: 
+    -0px -0px 0px #ffffff,
+    0px 0px 0px #8a929a;
+    transition: all .5s ease;
 }
 
-/* titulo de sobre mí - tamaño de fuente, grosor, alineacion, margen inferior, espaciado y color */
-.sobremi-title {
-    font-size: 28px;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 40px;
-    letter-spacing: 0.5px;
-    color: #ffffff;
+/*Hover de gameboy - sombra y tamaño*/
+.GAMEBOY:hover{
+     box-shadow: 
+    -10px -10px 15px #ffffff,
+    10px 10px 30px #8a929a;
+    transform: scale(1.01);
+
+}
+ /*Espacio para pantalla -  padding, border radius, color de fondo, neomorfismo con sombras*/
+.pantalla{
+    padding: 15px;
+    border-radius: 25px;
+    background-color: #c5cad1;
+    width: auto;
+    height: 400px;
+    box-shadow: 
+    -2px -2px 10px #c7cace,
+    2px 2px 10px #e8ebee,
+    inset 5px 5px 15px #92979d,
+    inset -10px -10px 5px #d3dce9;
+   
 }
 
-/* contenido principal de sobre mí - ancho maximo, margen, cuadricula de tres columnas, espacio y alineacion */
-.sobremi-main-content {
-    max-width: 1200px;
-    margin: 0 auto 30px auto;
-    display: grid;
-    grid-template-columns: 220px 1fr 280px;
-    gap: 25px;
-    align-items: center;
-}
+/*Espacio para lcd - border radius, color de fondo y de letra, sombra para neomorfismo, padding, display y acomodo*/
+.lcd{
+    border-radius: 15px;
+    background-color: #5faa78;
+    color: #204b35;
+    width: auto;
+    height: 370px;
+    box-shadow:
+    -2px -11px 15px #32363b,
+    2px 2px 10px #c5cad1,
+    inset 5px 5px 15px #5a6c5c,
+    inset -2px -2px 10px #5a6c5c;
+    padding: 25px;
+    
 
-/* barra lateral de sobre mí - visualizacion flexible en columna y espacio */
-.sobremi-sidebar {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    justify-content: space-between;
 }
 
-/* boton pill de sobre mí - color de fondo, color de texto, borde, padding, radio, tamaño de fuente, grosor, alineacion, cursor y transicion */
-.sobremi-pill {
-    background: #0b055a;
-    color: #cbd5e1;
-    border: 1px solid #ffffff;
-    padding: 12px 18px;
-    border-radius: 12px;
-    font-size: 14px;
-    font-weight: 500;
-    text-align: left;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-/* boton pill al pasar el cursor o activo - color de fondo, color de texto, color de borde, grosor de fuente y sombra */
-.sobremi-pill:hover {
-    background: #6c98ff;
-    color: #06181f;
-    border-color: #5eead4;
-    font-weight: 600;
-    box-shadow: 0 4px 15px rgba(94, 234, 212, 0.3);
-}
-
-/* visor de sobre mí- color de fondo, radio de borde, borde, desbordamiento oculto, posicion relativa*/
-.sobremi-viewport {
-    background: #ffffff;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    overflow: hidden;
-    position: relative;
-}
-
-/* barra de ventana - color de fondo, padding y espacio */
-.window-bar {
-    background: #0a0532;
-    padding: 10px 15px;
-    display: flex;
-    gap: 6px;
-}
-
-/* punto de ventana - ancho, altura, radio circular y color de fondo */
-.window-bar .dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #6a0c62;
-}
-
-/* pantalla de visor - posicion relativa, ancho y altura fija */
-.viewport-screen {
-    position: relative;
-    width: 100%;
-    min-height: 280px;
-    background: #080347; /* Fondo oscuro integrado para el texto */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Estilo añadido para el contenido de texto dentro del visor */
-.viewport-text-content {
-    padding: 40px 30px 30px 30px;
-    color: #ffffff;
-    text-align: left;
-    width: 100%;
-}
-
-.viewport-text-content h2 {
+/*Encabezado de pantalla lcd*/
+.first{
+    font-family:monospace;
+    color: #204b35;
     font-size: 20px;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 10px;
-}
-
-.viewport-text-content p {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #cbd5e1;
-    margin: 0;
-}
-
-/* miniatura de realidad aumentada - color de fondo, radio de borde, borde, desbordamiento oculto, posicion relativa, altura y sombra */
-.sobremi-thumbnail {
-    background: #092028;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    overflow: hidden;
-    position: relative;
-    height: 220px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-}
-
-/* imagen de miniatura - ancho, altura y ajuste de objeto */
-.sobremi-thumbnail img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* elementos graficos superpuestos verdes - posicion absoluta, ancho, altura, borde y desactivacion de eventos de puntero */
-.sobremi-overlay {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #6a0c62;
-    pointer-events: none;
-}
-
-/* esquina superior izquierda de superposicion - posicion superior izquierda y eliminacion de bordes derecho e inferior */
-.bracket-tl {
-    top: 15px;
-    left: 15px;
-    border-right: none;
-    border-bottom: none;
-}
-
-/* esquina inferior derecha de superposicion - posicion inferior derecha y eliminacion de bordes izquierdo y superior */
-.bracket-br {
-    bottom: 15px;
-    right: 15px;
-    border-left: none;
-    border-top: none;
-}
-
-/* etiqueta de interfaz de usuario de realidad aumentada - posicion absoluta, superior derecha, fondo, color, borde, padding, tamaño de fuente, fuente monoespaciada, radio y espaciado de letras */
-.sobremi-ui-tag {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: #06181fd9;
-    color: #548aff;
-    border: 1px solid #4c85ff;
-    padding: 4px 8px;
-    font-size: 10px;
-    font-family: monospace;
-    border-radius: 4px;
-    letter-spacing: 1px;
-    z-index: 2;
-}
-
-/* pie de pagina de realidad aumentada - alineacion de texto, tamaño de fuente, espaciado de letras, color, transformacion a mayusculas, margen superior y grosor de fuente */
-.sobremi-footer {
     text-align: center;
-    font-size: 12px;
-    letter-spacing: 2px;
-    color: #64748b;
-    text-transform: uppercase;
-    margin-top: 20px;
-    font-weight: 600;
+    
 }
 
-/* diseño responsivo para pantallas medianas - cambio a una columna y reorganizacion de barra lateral y botones */
-@media (max-width: 900px) {
-    .sobremi-main-content {
-        grid-template-columns: 1fr;
+/*Contenido de pantalla lcd*/
+.content{
+    font-family:monospace;
+    font-size: 17px;
+}
+
+/*Img en contenido de lcd*/
+#lcdPic{
+    width: 650px;
+    height: 250px;
+    border-radius: 10px;
+    -webkit-user-drag: none;  
+}
+
+
+/*?Pantalla2*/
+/*Pantalla del menú de opciones - distribucion*/
+.parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+}
+
+/*Apariencia de opciones del menú de opciones*/
+.options{
+    background-color: #5faa78;
+    height: 80px;
+    border: 1px solid #204b35;
+    text-align: center;
+    align-content: center;
+    font-family:monospace;
+    color: #204b35;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+/*Animación de opcion seleccionada*/
+@keyframes selected {
+0% {
+        background-color: #204b35;
+        color: #5faa78;
     }
-    .sobremi-sidebar {
+50% {
+        background-color: #5faa78;
+        color: #204b35;
+    }
+
+}
+
+/*Animacion para opcion seleccionada*/
+.activo{
+    animation: selected .8s step-end infinite;
+}
+
+/*Opcion 3 - distribución*/
+.div3 {
+    grid-row-start: 2;
+}
+
+/*Opcion 4 - distribución*/
+.div4 {
+    grid-row-start: 2;
+}
+/*?Fin pantalla 2*/
+
+/*Pie de pagina de pantalla lcd, contiene gui de botones accionables segun cada seccion - fuente, display, distribucion, color y tamaño de letra*/
+.guide{
+    font-family:monospace;
+    display: flex;
+    justify-content: center;
+    color: #204b35;
+    align-items: center;
+    font-size: 15px;
+}
+
+/*Color de botones de footer de pantalla lcd*/
+.guide div{
+    color: #5faa78;
+}
+
+/*Boton A o B en pantalla lcd - creacion de forma*/
+.lcdBtn{
+    border-radius: 30px;
+    background-color: #204b35;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    align-content: center;
+    margin-right: 5px;
+    margin-left: 20px;
+    
+}
+
+/*Botoes de flechas en pantalla lcd - creacion de forma*/
+.lcdarrow{
+    border-radius: 5px;
+    background-color: #204b35;
+    height: 30px;
+    margin-right: 10px;
+    text-align: center;
+    margin-right: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    
+
+}
+
+/*Controlador de gameboy, seccion en donde van los botones - color, padding, margin, display y distribucion*/
+.controlador{
+    margin-top: 50px;
+    background-color: #DCDFE3;
+    border-radius: 50px 50px 80px 10px;
+    width: auto;
+    height: 240px;
+    padding: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    gap: 8px;
+
+   
+    align-items: center;
+    justify-items: center;
+   
+}
+
+/*Botones de flechas*/
+/*? ==== FLECHAS ==== */
+/*Configuracion general de botones de flechas - display, color, se quita la opcion de que el texto se pueda seleccionar*/
+.arrowbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    color: #535c68;
+    
+}
+
+/*Hover de botones de flechas*/
+.arrowbtn:hover{
+    background-color: #d6d9dd;
+    
+    
+}
+
+/*Efecto de click para botones de flechas*/
+.arrowbtn:active{
+    background-color: #d6d9dd;
+   box-shadow:
+    -5px -5px 10px #e9ecf0,
+    5px 5px 20px #b2b8c0,
+    inset -3px -3px 1px #6f71734f,
+    inset 3px 3px 1px #5d5f6039;
+}
+
+
+/*Botones de flechas en eje x - dimensiones, neomorfismo y aspecto de cursor*/
+.arrowXbtn{
+    width: 60px;
+    height: 50px;
+    
+    box-shadow:
+    -5px -5px 10px #f8f9fa,
+    5px 5px 20px #9ba2ab,
+    inset -1px -1px 1px #898b8d4f,
+    inset 1px 1px 1px #898b8d39;
+    cursor:pointer;
+}
+
+/*Botones de flechas en eje y - dimensiones, neomorfismo y aspecto de cursor*/
+.arrowYbtn{
+    width: 50px;
+    height: 60px;
+    
+    box-shadow:
+    -5px -5px 10px #f8f9fa,
+    5px 5px 20px #9ba2ab,
+    inset -1px -1px 1px #898b8d4f,
+    inset 1px 1px 1px #898b8d39;
+    cursor:pointer;
+}
+
+/*Boton arriba - posicion y border radius*/
+.upBtn {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    border-radius: 0px 0px 20px 20px;
+}
+
+/*Boton derecha - posicion y border radius*/
+.rightBtn {
+    grid-column-start: 3;
+    grid-row-start: 3;
+    margin-left: 8px;
+    border-radius: 20px 0px 0px 20px;   
+}
+
+/*Boton abajo - posicion y border radius*/
+.downBtn {
+    grid-column-start: 2;
+    grid-row-start: 4;
+    border-radius: 20px 20px 0px 0px;
+
+}
+
+/*Boton izquierda - posicion y border radius*/
+.leftBtn {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    margin-right: 8px;
+    border-radius: 0px 20px 20px 0px;
+    margin-left: 90px;
+}
+
+
+/*Botones de accion - aspecto, neomorfismo, display*/
+/*? ==== AB ==== */
+.ABbtn{
+    background-color: #DCDFE3;
+    height: 70px;
+    width: 70px;
+    border-radius: 50px;
+    color: #535c68;
+
+    box-shadow:
+    -6px -6px 10px #f8f9fa,
+    2px 2px 20px #9ba2ab,
+    inset -1px -1px 1px #898b8d4f,
+    inset 1px 1px 1px #898b8d39;
+    cursor:pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    user-select: none;
+   font-size: larger;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*Hover de botones de accion*/
+.ABbtn:hover{
+    background-color: #d6d9dd;
+    box-shadow:
+    -5px -5px 10px #f8f9fa,
+    5px 5px 20px #9ba2ab,
+    inset -1px -1px 1px #6f71734f,
+    inset 1px 1px 1px #5d5f6039;
+}
+
+/*Efecto de click para botones de ACCION*/
+.ABbtn:active{
+    background-color: #d6d9dd;
+   box-shadow:
+    -5px -5px 10px #e9ecf0,
+    5px 5px 20px #b2b8c0,
+    inset -2px -2px 1px #6f71734f,
+    inset 2px 2px 1px #5d5f6039;
+}
+
+/*boton A*/
+.A {
+    grid-column-start: 5;
+    grid-row-start: 3;
+    margin-left: 40px;
+    transform: translateY(-20px);
+}
+
+/*BOTON B*/
+.B {
+    grid-column-start: 6;
+    grid-row-start: 3;
+    margin-left: 30px;
+    transform: translateY(20px);
+}
+
+/*Responsive de gameboy - tamaño, distribucion*/
+@media (max-width: 768px) {
+    /*Gameboy completo*/
+    .GAMEBOY{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        border-radius: 10px;
+        height: 840px;
+        width: 385px;
+        padding: 0px;
+        padding-top: 25px;
+        justify-items: center;
+        
+    }
+
+    /*Espacio para pantalla*/
+    .pantalla{
+        width: 350px;
+        height: 470px;
+        
+        box-shadow: none;
+    }
+
+    /*LCD*/
+    .lcd{
+        
+        height: 440px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*Contenido de lcd*/
+    .content{
+    font-family:monospace;
+    font-size: 14px;
+    }
+
+    /*footer de lcd*/
+    .guide{
+        display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .sobremi-pill {
-        flex: 1;
-        min-width: 130px;
         text-align: center;
+        justify-items: center;   
+        font-size: 10px;
+        
+    }
+
+    /*botones en bantalla lcd a y b*/
+    .lcdBtn{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    /*botones en pantalla lcd flechas*/
+    .lcdarrow{
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        align-items: center;
+    }
+
+    /*Imagen en pantalla lcd*/
+    #lcdPic{
+        width: 250px;
+        height: 250px;
+    }
+
+    /*espacio de botones gameboy*/
+    .controlador {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 3px;
+        align-items: center;
+        justify-items: center;
+    }
+
+    /*boton arriba*/
+    .upBtn {
+        grid-column: 2;
+        grid-row: 1;
+        border-radius: 50px;
+        height: 60px;
+        width: 80px;
+        
+    }
+    /*boton derecha*/
+    .rightBtn {
+        grid-column: 3;
+        grid-row: 2;
+        border-radius: 50px;
+        height: 60px;
+        width: 80px;
+
+        margin-left: 0px;
+    }
+
+    /*boton abajo*/
+    .downBtn {
+        grid-column: 2;
+        grid-row: 2;
+        border-radius: 50px;
+        height: 60px;
+        width: 80px;
+    }
+
+    /*boton izquierda*/
+    .leftBtn {
+        grid-column: 1;
+        grid-row: 2;
+        border-radius: 50px;
+        height: 60px;
+        width: 80px;
+        margin-left: 0px;
+    }
+
+    /*Boton A*/
+    .A {
+
+        grid-column: 1;
+        grid-row: 1;
+        margin-left: 0px;
+        margin-top: 30px;
+        transform: translateY(0px);
+        margin-bottom: 30px;
+        height: 60px;
+        width: 80px;
+        
+    }
+
+    /*Boton B*/
+    .B {
+        grid-column: 3;
+        grid-row: 1;
+        margin-left: 0px;
+        margin-top: 30px;
+        transform: translateY(0px);
+        margin-bottom: 30px;
+        height: 60px;
+        width: 80px;
     }
 }
+
+
+
 
 
 /*todo ================== PROYECTOS ===========================*/

@@ -124,9 +124,71 @@
         </div>
       </div>
     </section>
-    <!--todo ================== PROYECTOS ===================-->
-    <!--todo ================== PROYECTOS ===================-->
-    <!--todo ================== PROYECTOS ===================-->
+    <!--todo ================== PROYECTOS CON LEGO ===================-->
+    <!--todo ================== PROYECTOS CON LEGO ===================-->
+    <!--todo ================== PROYECTOS CON LEGO ===================-->
+
+    <div class="titulo-proyectos">PROYECTOS</div>
+
+    <!--Seccion de formulario-->
+    <section class="proyectos">
+      <div class="svg-lego">
+        <svg id="city" viewBox="-115 50 1200 750"></svg>
+      </div>
+
+      <div class="form">
+        <form id="projectForm">
+          <div id="formAlert" class="alerta oculto" role="alert"></div>
+
+          <label for="name">Nombre</label>
+          <div class="campo">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Rayo McQueen"
+              minlength="3"
+              maxlength="30"
+              required
+            />
+          </div>
+
+          <label for="vehicle">Vehículo</label>
+          <div class="campo">
+            <select id="vehicle" name="vehicle" required>
+              <option value="" disabled selected>Elige un vehículo</option>
+              <option value="sedan">Sedán</option>
+              <option value="sport">Deportivo</option>
+              <option value="truck">Camioneta</option>
+            </select>
+          </div>
+
+          <label for="speed">Velocidad</label>
+          <div class="campo">
+            <select id="speed" name="speed" required>
+              <option value="slow">Lenta</option>
+              <option value="medium" selected>Media</option>
+              <option value="fast">Rápida</option>
+            </select>
+          </div>
+
+          <label for="color">Color</label>
+          <div class="campo">
+            <input
+              type="color"
+              id="colorSelector"
+              name="color"
+              value="#d9382f"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn-enviar">Crear</button>
+        </form>
+      </div>
+
+      <div class="created">CREATED</div>
+    </section>
 
     <!-- seccion de proyectos -->
     <section class="projects-section" id="projects">
@@ -394,6 +456,6 @@
         </div>
       </div>
     </section>
-    <script src="script.js"></script>
+    <script src="scripts/script.js" type="module"></script>
   </body>
 </html>

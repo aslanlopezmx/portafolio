@@ -161,7 +161,7 @@ body {
     .nav-links {
        position: absolute;
         top: 100%; 
-        left: -100%;
+        left: -120%;
         width: 100vw; 
         background-color: #000000;
         flex-direction: column;
@@ -312,7 +312,6 @@ body {
 /* seccion de contenido explicativo - color de fondo, color de texto y padding */
 .content-section {
     background-color: #dcdfe3;
-    color: #0f172a;
     padding: 60px 50px;
 }
 
@@ -328,13 +327,13 @@ body {
     font-weight: 700;
     margin-bottom: 12px;
     text-align: center;
-    color: #0d3844;
+    color: #33425c;
 }
 
 /* parrafo de contenido - tamaño de fuente, color, ancho maximo y altura de linea */
 .content-inner p {
     font-size: 14px;
-    color: #475569;
+    color: #17263b;
     text-align: center;
     line-height: 1.5;
 }
@@ -792,7 +791,7 @@ body {
     /*Imagen en pantalla lcd*/
     #lcdPic{
         width: 250px;
-        height: 250px;
+        height: 120px;
     }
 
     /*espacio de botones gameboy*/
@@ -875,10 +874,118 @@ body {
 
 
 
-/*todo ================== PROYECTOS ===========================*/
-/*todo ================== PROYECTOS ===========================*/
-/*todo ================== PROYECTOS ===========================*/
+/*todo ================== PROYECTOS CON LEGO ===========================*/
+/*todo ================== PROYECTOS CON LEGO ===========================*/
+/*todo ================== PROYECTOS CON LEGO ===========================*/
 
+.titulo-proyectos{
+    margin: 50px;
+    background-color: rgb(37, 77, 129);
+    height: 200px;
+}
+
+.proyectos {
+    background-color: #53beef;
+    position: relative;
+    margin: 50px;
+    margin-bottom: 200px;
+
+    display: flex;
+    justify-content: space-between;
+    
+
+    
+}
+
+.form, .created {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.85);
+   
+    max-width: 350px;
+    min-width: 250px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.form {
+
+}
+
+.created{
+    align-content: center;
+    text-align: center;
+
+
+}
+
+/* Contenedor y lienzo SVG (Fondo) */
+.svg-lego {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    z-index: 0;
+}
+
+/* Elementos internos del formulario */
+#projectForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 8px;
+    text-align: left;
+    gap: 2px;
+}
+
+#projectForm div {
+    align-items: center;
+}
+
+.form label,
+.form input,
+.form select,
+.form button {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.campo {
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 50px;
+    width: 80%;
+    padding: 5px;
+}
+
+.campo input,
+.campo select {
+    border-radius: 20px;
+    border: none;
+    width: 100%;
+    text-align: center;
+}
+
+.campo input:focus {
+    outline: none;
+}
+
+/* Vista para celular */
+@media (max-width: 991px) {
+    .proyectos {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 600px;
+        margin-bottom: 20px;
+    }
+
+    .form, .created {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+/**todo================finLegos*/
+/**todo=======================================================================*/
 /* seccion de proyectos - color de fondo, padding y color de texto */
 .projects-section {
     background: linear-gradient(135deg, #010613, #14002d, #23020f, #09021d, #0a0017, #14002d, #03002d);

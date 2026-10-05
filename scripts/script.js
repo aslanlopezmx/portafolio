@@ -1,4 +1,5 @@
-import { bricks, miSet } from "./lego.js";
+import { bricks, suelo, edificios } from "./lego.js";
+import { agregarCarro, quitarCarro, actualizarCarro } from "./traffic.js";
 
 /* ============== SOBRE MÍ - GAMEBOY =======================*/
 /* ============== SOBRE MÍ - GAMEBOY =======================*/
@@ -19,7 +20,7 @@ const aboutMe = [
   {
     titulo: "Hobbies",
     descripcion:
-      "Me apasiona la lectura, específicamente en temas sobre el comportamiento humano, el estoicismo y el desarrollo personal. Disfruto mucho crear música tanto como productor como tocando instrumentos musicales. Por último y como dato random, concluir el título de arquitectura es un reto personal pendiente en mi lista de cosas por hacer antes de morir.",
+      "Me apasiona la lectura, específicamente en temas sobre el comportamiento humano, el estoicismo y el desarrollo personal. Disfruto crear música tanto como productor como tocando instrumentos musicales. Por último y como dato random, concluir el título de arquitectura es un reto personal pendiente en mi lista de cosas por hacer antes de morir.",
   },
   {
     titulo: "Vision",
@@ -209,7 +210,101 @@ btnLeft.addEventListener("click", () => {
   console.log("Fila: " + fila + "\n Columna: " + columna);
 });
 
-//todo=========================== Invocador de funcion global, bricks genera un bloque por cada array, miSet es un array de arrays
+//todo=========================== PROYECTOS DESTACADOS ---- LEGO =============================
+//todo=========================== PROYECTOS DESTACADOS ---- LEGO =============================
+//todo=========================== PROYECTOS DESTACADOS ---- LEGO =============================
 
-//construir cisudad de lego
-document.querySelector("#city").innerHTML = bricks(miSet);
+//construir ciudad de lego, TRAER EL SET DE LEGO DESDE lego.js, y mostrarlo en el contenedor con id city, usando la funcion bricks() que esta en lego.js
+document.querySelector("#suelo").innerHTML = bricks(suelo);
+document.querySelector("#edificios").innerHTML = bricks(edificios);
+
+//todo    ========================      FORMULARIO   =========================
+//todo    ========================      FORMULARIO   =========================
+//todo    ========================      FORMULARIO   =========================
+/*Seleccion de elementos en el DOM*/
+
+const form = document.querySelector("#projectForm");
+const carContainer = document.querySelector(".created");
+
+//Creacion de un div para contener los vehiculos creados, y un array para almacenar los vehiculos creados
+const createdCars = document.createElement("div");
+let vehiculos = [];
+let editedIndex = null;
+
+/*Si el boton de enviar formulario es presionado, se acciona esta funcion, basícamente convierte los datos del formulario en un objeto, y despues crea su version de diccionario JSON*/
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const formCarData = new FormData(form);
+  const Carro = Object.fromEntries(formCarData);
+  if (vehiculos.length === 12) {
+    alert("Solo puedes poner 12 carritos");
+    return;
+  }
+
+  console.log("Datos del formulario capturados:", Carro);
+
+  //Si editedIndex es diferente de null, significa que se esta editando un vehiculo existente, por lo que se reemplaza el vehiculo en la posicion editedIndex del array vehiculos con el objeto Carro, y se reinicia editedIndex a null, y se cambia el texto del boton de enviar formulario a "Crear Vehículo", si editedIndex es null, significa que se esta creando un nuevo vehiculo, por lo que se agrega el objeto Carro al final del array vehiculos.
+  if (editedIndex !== null) {
+    Carro.id = vehiculos[editedIndex].id;
+    vehiculos[editedIndex] = Carro;
+    actualizarCarro(Carro);
+    editedIndex = null;
+    form.querySelector(".btn-enviar").textContent = "Crear Vehículo";
+  } else {
+    Carro.id = Date.now();
+    vehiculos.push(Carro);
+    agregarCarro(Carro);
+  }
+
+  console.log("Vehiculos creados:", vehiculos);
+  showCarsCards();
+  form.reset();
+});
+
+function showCarsCards() {
+  carContainer.innerHTML = "";
+  vehiculos.forEach((car, index) => {
+    const carCard = document.createElement("div");
+    carCard.classList.add("car");
+
+    carCard.innerHTML = `
+    <div class="car-thing createdName">${car.name}</div>
+
+          <div class="edit"><button data-id="${index}" class="btn-edit">Editar</button></div>
+
+          <div class="delete"><button data-id="${index}" class="btn-delete">Eliminar</button></div>
+
+          <div class="car-thing createdVehicle">${car.vehicle}</div>
+
+          <div class="car-thing createdSpeed">${car.speed}</div>
+
+          <div class="car-thing createdColor" style="background-color: ${car.color};" title="${car.color}"></div>`;
+
+    carContainer.appendChild(carCard);
+  });
+}
+
+carContainer.addEventListener("click", (e) => {
+  if (e.target.classList.contains("btn-delete")) {
+    const index = parseInt(e.target.getAttribute("data-id"));
+
+    quitarCarro(vehiculos[index].id);
+    vehiculos.splice(index, 1);
+    showCarsCards();
+  }
+});
+
+carContainer.addEventListener("click", (e) => {
+  if (e.target.classList.contains("btn-edit")) {
+    const index = parseInt(e.target.getAttribute("data-id"));
+    const editedCar = vehiculos[index];
+    form.elements["name"].value = editedCar.name;
+    form.elements["vehicle"].value = editedCar.vehicle;
+    form.elements["speed"].value = editedCar.speed;
+    form.elements["color"].value = editedCar.color;
+
+    editedIndex = index;
+    form.querySelector(".btn-enviar").textContent = "Guardar Cambios";
+  }
+});

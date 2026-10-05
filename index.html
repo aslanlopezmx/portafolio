@@ -57,7 +57,7 @@
         <!-- texto de inicio -->
         <div class="hero-text">
           <h1>DESARROLLADOR<br />FULL STACK</h1>
-          <p>FRONT-END | BACK-END | CIBERSEGURIDAD</p>
+          <p>FRONT-END | BACK-END</p>
           <a href="https://www.linkedin.com/in/aslan-lopez/"
             ><button class="cta-btn">COLABORAR</button></a
           >
@@ -80,7 +80,7 @@
       <div class="content-inner">
         <h2>TECNOLOGÍAS</h2>
         <p>
-          Java | HTML5 | CSS3 | JavaScript | Git/Github | VSCode | IntelliJ Idea
+          Java | JavaScript | HTML5 | CSS3 | Git/Github | VSCode | IntelliJ Idea
           | Eclipse | Linux | Apache | SQL | JSON | Spring | IA | Jira | Figma
         </p>
       </div>
@@ -128,47 +128,70 @@
     <!--todo ================== PROYECTOS CON LEGO ===================-->
     <!--todo ================== PROYECTOS CON LEGO ===================-->
 
-    <div class="titulo-proyectos">PROYECTOS</div>
+    <div class="titulo-proyectos"><div class="titulo">PROYECTOS</div></div>
 
     <!--Seccion de formulario-->
     <section class="proyectos">
       <div class="svg-lego">
-        <svg id="city" viewBox="-115 50 1200 750"></svg>
+        <svg id="city" viewBox="-115 0 1200 750">
+          <g id="suelo"></g>
+          <g id="carros"></g>
+          <g id="edificios"></g>
+        </svg>
+
+        <div class="hitbox edificio-1"></div>
+        <div class="hitbox edificio-2"></div>
+        <div class="hitbox edificio-3"></div>
+        <div class="hitbox edificio-4"></div>
+        <div class="hitbox edificio-5"></div>
+        <div class="hitbox edificio-6"></div>
+        <div class="hitbox edificio-7"></div>
+        <div class="hitbox edificio-8"></div>
+        <div class="hitbox edificio-9"></div>
       </div>
 
       <div class="form">
         <form id="projectForm">
-          <div id="formAlert" class="alerta oculto" role="alert"></div>
-
           <label for="name">Nombre</label>
           <div class="campo">
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Rayo McQueen"
-              minlength="3"
-              maxlength="30"
-              required
-            />
+            <select name="name" id="name">
+              <option value="McQueen">McQueen</option>
+              <option value="Herbie">Herbie</option>
+              <option value="Relámpago">Relámpago</option>
+              <option value="Carcacha">Carcacha</option>
+              <option value="DeLorean">DeLorean</option>
+              <option value="Bumblebee">Bumblebee</option>
+              <option value="Maquinon">Maquinon</option>
+              <option value="Jepetta">Jepetta</option>
+              <option value="Batimovil">Batimovil</option>
+              <option value="Rayo">Rayo</option>
+              <option value="Huracan">Huracan</option>
+              <option value="Guagua">Guagua</option>
+            </select>
           </div>
 
           <label for="vehicle">Vehículo</label>
           <div class="campo">
             <select id="vehicle" name="vehicle" required>
-              <option value="" disabled selected>Elige un vehículo</option>
-              <option value="sedan">Sedán</option>
-              <option value="sport">Deportivo</option>
-              <option value="truck">Camioneta</option>
+              <option value="Deportivo">Deportivo</option>
+              <option value="Sedan">Sedán</option>
+              <option value="Camioneta">Truck</option>
+              <option value="Mini">Mini</option>
+              <option value="Sub">Sub</option>
+              <option value="Clasico">Clásico</option>
+              <option value="Cubo">Cubo</option>
+              <option value="Bus">Bus</option>
             </select>
           </div>
 
           <label for="speed">Velocidad</label>
           <div class="campo">
             <select id="speed" name="speed" required>
-              <option value="slow">Lenta</option>
-              <option value="medium" selected>Media</option>
-              <option value="fast">Rápida</option>
+              <option value="Lentisimo">Lentisimo</option>
+              <option value="Lento">Lento</option>
+              <option value="Normal">Media</option>
+              <option value="Rapido" selected>Rápido</option>
+              <option value="Rapidismo">Rapidisimo</option>
             </select>
           </div>
 
@@ -183,99 +206,108 @@
             />
           </div>
 
-          <button type="submit" class="btn-enviar">Crear</button>
+          <button type="submit" class="btn-enviar">Crear Vehículo</button>
         </form>
       </div>
 
-      <div class="created">CREATED</div>
-    </section>
-
-    <!-- seccion de proyectos -->
-    <section class="projects-section" id="projects">
-      <div class="projects-container">
-        <h2 class="projects-title">Proyectos Destacados</h2>
-        <p class="projects-subtitle">Explora mi full stack y desarrollo web</p>
-
-        <div class="projects-grid">
-          <!-- card de proyectos -->
-          <div class="project-card">
-            <!-- imagen de proyecto -->
-            <div class="project-image">
-              <img src="assets/proximamente.jpg" alt="Proyecto 1" />
-            </div>
-            <!-- informacion de proyecto -->
-            <div class="project-info">
-              <h3>Proyecto</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam,
-                sit error? Non tempore unde dolores fuga obcaecati vel cumque
-                facilis quas aut et animi sed porro, nihil voluptatum
-                consequuntur eius.
-              </p>
-              <!-- tags de proyecto -->
-              <div class="project-tags">
-                <span>-----</span>
-                <span>-----</span>
-                <span>-----</span>
-              </div>
-              <!-- enlace de proyecto -->
-              <a href="#" class="project-link">Ver Sitio &rarr;</a>
-            </div>
-          </div>
-
-          <!-- card de proyectos -->
-          <div class="project-card">
-            <!-- imagen de proyecto -->
-            <div class="project-image">
-              <img src="assets/proximamente.jpg" alt="Proyecto 2" />
-            </div>
-            <!-- informacion de proyecto -->
-            <div class="project-info">
-              <h3>Proyecto</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae
-                deleniti aperiam voluptatem rem asperiores veritatis, recusandae
-                harum esse amet iusto numquam. Maxime dolores ut aspernatur eum
-                aperiam provident consequatur possimus?
-              </p>
-              <!-- tags de proyecto -->
-              <div class="project-tags">
-                <span>-----</span>
-                <span>-----</span>
-                <span>-----</span>
-              </div>
-              <!-- enlace de proyecto -->
-              <a href="#" class="project-link">Ver Sitio &rarr;</a>
-            </div>
-          </div>
-
-          <!-- card de proyectos -->
-          <div class="project-card">
-            <!-- imagen de proyecto -->
-            <div class="project-image">
-              <img src="assets/proximamente.jpg" alt="Proyecto 3" />
-            </div>
-            <!-- informacion de proyecto -->
-            <div class="project-info">
-              <h3>Proyecto</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto,
-                labore voluptates inventore quos sapiente aperiam quaerat ex,
-                aliquid ipsam excepturi perferendis natus laborum ullam id
-                harum, quo repellendus tempora dignissimos!
-              </p>
-              <!-- tags de proyecto -->
-              <div class="project-tags">
-                <span>-----</span>
-                <span>-----</span>
-                <span>-----</span>
-              </div>
-              <!-- enlace de proyecto -->
-              <a href="#" class="project-link">Ver Sitio &rarr;</a>
-            </div>
-          </div>
+      <!-- Tarjetas de información -->
+      <div class="card-proyecto card-1">
+        <div class="parent">
+          <div class="div1">1</div>
+          <div class="div2">2</div>
+          <div class="div3">3</div>
+          <div class="div4">4</div>
         </div>
       </div>
+
+      <div class="card-proyecto card-2">
+        <div class="parent">
+          <div class="div1">1</div>
+          <div class="div2">2</div>
+          <div class="div3">3</div>
+          <div class="div4">4</div>
+        </div>
+      </div>
+
+      <div class="card-proyecto card-3">
+        <div class="parent">
+          <div class="div1">1</div>
+          <div class="div2">2</div>
+          <div class="div3">3</div>
+          <div class="div4">4</div>
+        </div>
+      </div>
+
+      <div class="card-proyecto card-4">
+        <div class="parent">
+          <div class="div1">1</div>
+          <div class="div2">2</div>
+          <div class="div3">3</div>
+          <div class="div4">4</div>
+        </div>
+      </div>
+
+      <div class="card-proyecto card-5">
+        <div class="parent">
+          <div class="div1">1</div>
+          <div class="div2">2</div>
+          <div class="div3">3</div>
+          <div class="div4">4</div>
+        </div>
+      </div>
+
+      <div class="card-proyecto card-6">
+        <div class="parent">
+          <div class="div1">1</div>
+          <div class="div2">2</div>
+          <div class="div3">3</div>
+          <div class="div4">4</div>
+        </div>
+      </div>
+
+      <div class="card-proyecto rutta">
+        <div class="imagen-proyecto">
+          <img
+            class="logo-proyecto"
+            src="/assets/proyectos/rutta/rutta-iso.png"
+          />
+        </div>
+        <div class="texto-proyecto">
+          <p>
+            Rutta es una plataforma web interactiva diseñada para entusiastas
+            del senderismo y el ecoturismo, enfocada en la planificación de
+            rutas y comercio electrónico de artículos para montaña. Su interfaz
+            combina un diseño moderno y responsivo con herramientas de gestión
+            de proyectos y navegación intuitiva para optimizar la experiencia
+            del usuario. Desarrollada de manera colaborativa bajo metodologías
+            ágiles, integra tecnologías front-end avanzadas para ofrecer una
+            solución escalable y atractiva visualmente.
+          </p>
+        </div>
+        <div class="ss-proyecto">
+          <img class="captura" src="/assets/proyectos/rutta/ss1.png" />
+        </div>
+      </div>
+
+      <div class="card-proyecto card-8">
+        <div class="parent">
+          <div class="div1">1</div>
+          <div class="div2">2</div>
+          <div class="div3">3</div>
+          <div class="div4">4</div>
+        </div>
+      </div>
+
+      <div class="card-proyecto card-9">
+        <div class="parent">
+          <div class="div1">1</div>
+          <div class="div2">2</div>
+          <div class="div3">3</div>
+          <div class="div4">4</div>
+        </div>
+      </div>
+
+      <div class="created"></div>
     </section>
 
     <!--todo ================== TRAYECTORIA ===================-->

@@ -218,9 +218,9 @@ btnLeft.addEventListener("click", () => {
 document.querySelector("#suelo").innerHTML = bricks(suelo);
 document.querySelector("#edificios").innerHTML = bricks(edificios);
 
-//todo    ========================      FORMULARIO   =========================
-//todo    ========================      FORMULARIO   =========================
-//todo    ========================      FORMULARIO   =========================
+//?    ========================      FORMULARIO   =========================
+//?    ========================      FORMULARIO   =========================
+//?    ========================      FORMULARIO   =========================
 /*Seleccion de elementos en el DOM*/
 
 const form = document.querySelector("#projectForm");
@@ -306,5 +306,115 @@ carContainer.addEventListener("click", (e) => {
 
     editedIndex = index;
     form.querySelector(".btn-enviar").textContent = "Guardar Cambios";
+  }
+});
+
+//?    ========================      CARDS DE PROYECTOS   =========================
+//?    ========================      CARDS DE PROYECTOS   =========================
+//?    ========================      CARDS DE PROYECTOS   =========================
+
+const proyectosPortafolio = [
+  {
+    imagen: "",
+    encabezado: "0",
+    contenido: "0",
+  },
+  {
+    imagen: "1",
+    encabezado: "1",
+    contenido: "1",
+  },
+  {
+    imagen: "2",
+    encabezado: "2",
+    contenido: "2",
+  },
+  {
+    imagen: "3",
+    encabezado: "3",
+    contenido: "3",
+  },
+  {
+    imagen: "4",
+    encabezado: "4",
+    contenido: "4",
+  },
+  {
+    imagen: "5",
+    encabezado: "5",
+    contenido: "5",
+  },
+  {
+    imagen: `<img class="logo-proyecto" src="/assets/proyectos/rutta/rutta-iso.png">`,
+    encabezado:
+      "Rutta es una plataforma e-commerce y de comunidad para senderismo, desarrollada colaborativamente mediante la metodología Scrum Agile junto a mi equipo Trail Coders. Su propuesta de valor central es una guía experta integrada para la selección de equipo adaptada al nivel y dificultad de cada ruta. El proyecto destaca por su arquitectura robusta, una experiencia de usuario interactiva y optimizada para la conversión, y la resolución de necesidades técnicas reales del excursionismo.",
+    contenido: `
+                <div class="elemento"><img src="/assets/proyectos/rutta/ss2.png"></div>`,
+  },
+  {
+    imagen: "7",
+    encabezado: "7",
+    contenido: "7",
+  },
+  {
+    imagen: "8",
+    encabezado: "8",
+    contenido: "8",
+  },
+];
+const seccionProyectos = document.querySelector(".proyectos");
+const contenedorHitbox = document.querySelector(".svg-lego");
+const cajaProyecto = document.querySelector(".contenedorProyecto");
+let hitedHitbox = 9;
+
+const generarProyecto = () => {
+  const divProyecto = document.createElement("div");
+  divProyecto.classList.add("proyectoVisible");
+  divProyecto.innerHTML = `
+        <div class="imagen-proyecto">
+        ${proyectosPortafolio[hitedHitbox].imagen}
+        </div>
+        <div class="encabezado-proyecto">
+        ${proyectosPortafolio[hitedHitbox].encabezado}
+        </div>
+        <div class="contenido-proyecto">
+        ${proyectosPortafolio[hitedHitbox].contenido}
+        </div>`;
+  cajaProyecto.innerHTML = "";
+  cajaProyecto.appendChild(divProyecto);
+};
+
+contenedorHitbox.addEventListener("click", (e) => {
+  console.log(e.target, e.target.classList);
+  if (e.target.classList.contains("edificio-1")) {
+    hitedHitbox = 0;
+    generarProyecto();
+  } else if (e.target.classList.contains("edificio-2")) {
+    hitedHitbox = 1;
+    generarProyecto();
+  } else if (e.target.classList.contains("edificio-3")) {
+    hitedHitbox = 2;
+    generarProyecto();
+  } else if (e.target.classList.contains("edificio-4")) {
+    hitedHitbox = 3;
+    generarProyecto();
+  } else if (e.target.classList.contains("edificio-5")) {
+    hitedHitbox = 4;
+    generarProyecto();
+  } else if (e.target.classList.contains("edificio-6")) {
+    hitedHitbox = 5;
+    generarProyecto();
+  } else if (e.target.classList.contains("edificio-7")) {
+    hitedHitbox = 6;
+    generarProyecto();
+  } else if (e.target.classList.contains("edificio-8")) {
+    hitedHitbox = 7;
+    generarProyecto();
+  } else if (e.target.classList.contains("edificio-9")) {
+    hitedHitbox = 8;
+    generarProyecto();
+  } else if (hitedHitbox < 9) {
+    hitedHitbox = 9;
+    cajaProyecto.innerHTML = "";
   }
 });

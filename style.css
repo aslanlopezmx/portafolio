@@ -374,16 +374,16 @@ body {
 /*todo ============== SOBRE MÍ - LCD =======================*/
 /*Seccion sobre mí - color de fondo, pading, display y acomodo*/
 .display-section{
-   padding: 0px;
-   background-color: #dcdfe3;
-   display: flex;
-   flex-direction: row;
-   flex-wrap: nowrap;
-   justify-content: center;
-   align-items: stretch;
-   align-content: stretch;
+    padding: 0px;
+    background-color: #dcdfe3;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: stretch;
 }
- /*Espacio que simula un "gameboy"- margin, padding, xolor de fondo, tamaño definido, border radius, sombra para neomorfismo y transicion*/
+/*Espacio que simula un "gameboy"- margin, padding, xolor de fondo, tamaño definido, border radius, sombra para neomorfismo y transicion*/
 .GAMEBOY{
     margin-top: 130px;
     margin-bottom: 100px;
@@ -573,10 +573,8 @@ body {
     grid-template-rows: repeat(7, 1fr);
     gap: 8px;
 
-   
     align-items: center;
     justify-items: center;
-   
 }
 
 /*Botones de flechas*/
@@ -689,8 +687,8 @@ body {
     align-items: center;
 
     user-select: none;
-   font-size: larger;
-   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 /*Hover de botones de accion*/
@@ -706,7 +704,7 @@ body {
 /*Efecto de click para botones de ACCION*/
 .ABbtn:active{
     background-color: #d6d9dd;
-   box-shadow:
+    box-shadow:
     -5px -5px 10px #e9ecf0,
     5px 5px 20px #b2b8c0,
     inset -2px -2px 1px #6f71734f,
@@ -885,64 +883,106 @@ body {
 /*todo ================== PROYECTOS CON LEGO ===========================*/
 /*todo ================== PROYECTOS CON LEGO ===========================*/
 
+
+.info{
+    height: 200px;
+    text-align: center;
+    align-content: center;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    background-color: #dcdfe3;
+    font-size: clamp(20px, 30px, 500px);
+    position: relative;
+}
+.info::before{
+    content: 'La siguiente seccion es interactiva, puedes conocer los proyectos en los que he estado involucrado haciendo click en los edificios. Para cerrar la ventana del proyecto solo vuelve a hacer click dentro de la seccion de legos. Finalmente, por pura diversión (y aprendizaje) diseñé una experiencia en la que puedes crear, editar y eliminar vehiculos personalizados que le darán vida a la ciudad';
+    position: absolute;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    align-content: center;
+    left: 5px;
+    top: 5px;
+    bottom: 5px;
+    width: 80%px;
+    padding: 20px;
+    background: #dcdfe3;
+    opacity: 0;
+    transition: all .5s ease;
+    line-height: 1.5;
+    padding: 50px;
+}
+
+.info:hover::before{
+    opacity: 1;
+}
+
+
+
+
 /*Seccion en donde va el titulo - margen superior, color de fondo y altura del contenedor del título*/
 .titulo-proyectos {
 
-    background-color: #dadada;
-    padding: 20px;
+    background-color: #dcdfe3;
+
 
 
 }
 
 .titulo{
-    background-color: #dadada;
+    background-color: #dcdfe3;
 
-    border: 1px solid #000000;
+
     color: #ffffff;
     text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 100px;
     color: #000000;
     letter-spacing: 50px;
+
+
+    padding-top: 30px;
+    padding-bottom: 30px;
 
 }
 
 /*Seccion que contiene formulario, svg, y divs de proyectos en estado invisible - altura, color de fondo, posicionamiento y reglas de distribución flexibles*/
 .proyectos {
     height: 750px;
-    background-color: #dadada;
+    background-color: #dcdfe3;
     position: relative;
 
-
     justify-content: space-between;
-
 
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(6, 1fr);
+
+    overflow: hidden;
 
 }
 
 /*Contenedor y lienzo SVG (Fondo) - posicionamiento absoluto centrado, ancho del lienzo y orden de apilamiento*/
 .svg-lego {
     position: absolute;
+    width: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 1200px;
+
     z-index: 0;
 }
 
+
 /*Formulario y contenedor de tarjetas creadas - posicionamiento, dimensiones máximas/mínimas, márgenes, alineación de texto y diseño glassmorphism*/
 .form{
-    background-color: #dadada;
+    background-color: #dcdfe3;
     grid-row: span 6 / span 6;
     border: 1px solid #000000;
     width: 250px;
+    margin-top: 20px;
     margin-left: 20px;
     margin-bottom: 20px;
     align-content: center;
     z-index: 1;
+    border-radius: 10px;
 }
 
 /*Elementos internos del formulario - dirección flexible, alineación central, tamaño de fuente, alineación de texto y espacio entre elementos*/
@@ -957,7 +997,7 @@ body {
     margin-top: 50px;
     margin-bottom: 10px;
     font-size: 15px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Arial Narrow Bold', sans-serif;
 }
 
 /*Elementos de texto y controles interactivos del formulario - tipografía global heredada o aplicada al sistema*/
@@ -965,8 +1005,12 @@ body {
 .form input,
 .form select,
 .form button {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Arial Narrow Bold', sans-serif;
     letter-spacing: 2px;
+}
+
+.form button{
+    margin-bottom: 20px;
 }
 
 .btn-enviar:active,
@@ -1013,9 +1057,10 @@ body {
 
 /*Sección de elementos creados o lista de proyectos - diseño flexible en columna, alineación centrada y relleno interno*/
 .created {
-    background-color: #dadada;
+    background-color: #dcdfe3;
     grid-row: span 6 / span 6;
     grid-column-start: 5;
+    margin-top: 20px;
     margin-bottom: 20px;
     margin-right: 20px;
     align-content: center;
@@ -1031,6 +1076,7 @@ body {
     flex-direction: column;
     align-items: center;
 
+    border-radius: 10px;
 
 
 }
@@ -1062,7 +1108,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Arial Narrow Bold', sans-serif;
 
 }
 
@@ -1075,10 +1121,10 @@ body {
     width: 90%;
     border: none;
 
-   
-        background-color: #878787;
-        color: #ffffff;
-        border-radius: 15px;
+
+    background-color: #878787;
+    color: #ffffff;
+    border-radius: 15px;
 }
 
 /*Áreas interactivas (hitboxes) sobre el mapa - posicionamiento absoluto, cursor de puntero, transformaciones geométricas de inclinación/rotación para simular isometría y borde temporal de calibración*/
@@ -1088,32 +1134,31 @@ body {
     cursor: pointer;
     transform: rotate(134.5deg) skew(18deg, 18deg);
 
-    border: 1px solid #0bf241;
-
+    border: none;
 }
 
 /*Posición y dimensiones iniciales del primer edificio - coordenadas de ubicación (top/left) y tamaño del elemento*/
 .edificio-1 {
     top: 29%;
     left: 45%;
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
 }
 
 /*Posición y dimensiones iniciales del segundo edificio - coordenadas de ubicación (top/left) y tamaño del elemento*/
 .edificio-2 {
     top: 39%;
     left: 58%;
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
 }
 
 /*Posición y dimensiones iniciales del tercer edificio - coordenadas de ubicación (top/left) y tamaño del elemento*/
 .edificio-3 {
     top: 49%;
     left: 71%;
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
 
 }
 
@@ -1121,24 +1166,24 @@ body {
 .edificio-4 {
     top: 39%;
     left: 33%;
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
 }
 
 /*Posición y dimensiones iniciales del quinto edificio - coordenadas de ubicación (top/left) y tamaño del elemento*/
 .edificio-5 {
     top: 49%;
     left: 46%;
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
 }
 
 /*Posición y dimensiones iniciales del sexto edificio - coordenadas de ubicación (top/left) y tamaño del elemento*/
 .edificio-6 {
     top: 59%;
     left: 58%;
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
 
 }
 
@@ -1146,24 +1191,24 @@ body {
 .edificio-7 {
     top: 49%;
     left: 20%;
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
 }
 
 /*Posición y dimensiones iniciales del octavo edificio - coordenadas de ubicación (top/left) y tamaño del elemento*/
 .edificio-8 {
     top: 59%;
     left: 33%;
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
 }
 
 /*Posición y dimensiones iniciales del noveno edificio - coordenadas de ubicación (top/left) y tamaño del elemento*/
 .edificio-9 {
     top: 69%;
     left: 46%;
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
 }
 
 
@@ -1171,98 +1216,100 @@ body {
 
 
 /*Configuración visual de las tarjetas de proyectos flotantes - posicionamiento absoluto centrado, colores, relleno, bordes redondeados, orden de apilamiento, opacidad inicial oculta, transición y desactivación de eventos de cursor*/
-.card-proyecto {
+.proyectoVisible {
     position: absolute;
-    height: 80%;
-    width: 90%;
-    
+    height: 90%;
+    width: 70%;
+
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
-/* From https://css.glass */
-    background: rgba(0, 0, 0, 0.68);
-    backdrop-filter: blur(10.4px);
-    -webkit-backdrop-filter: blur(2.2px);
 
     color: #ffffff;
     padding: 20px;
     border-radius: 12px;
     z-index: 100;
-    opacity: 0;
-    visibility: hidden;
-    transition: all .3s ease;
 
-    /* Clave: El cursor ignora la tarjeta, el hover en el hitbox se mantiene */
     pointer-events: none;
-
-        display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            grid-template-rows: repeat(5, 1fr);
-            gap: 8px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 12px;
 
 }
 
-.imagen-proyecto {
-    grid-column: span 2 / span 2;
-    grid-row: span 5 / span 5;
-    display: flex;   
-    justify-content: center;
 
+.imagen-proyecto {
+    grid-row: span 5 / span 5;
+    /* From https://css.glass */
+    background: #000000a3;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.7px);
+    -webkit-backdrop-filter: blur(5.7px);
+    border: 1px solid rgb(255, 255, 255);
+
+    align-content: center;
+    text-align: center;
 }
 
 .logo-proyecto {
-    width: clamp(30px, 80%, 500px);
-    align-self: center;
+    width: 400px;
 }
 
-.texto-proyecto {
+.encabezado-proyecto {
     grid-column: span 3 / span 3;
     grid-row: span 2 / span 2;
-    grid-column-start: 3;
-    margin: 30px;
-    margin-left: 0px;
 
-    font-size: clamp(0.85rem, 1.2vw + 0.4rem, 1.25rem);
+    font-size: clamp(0.70rem, 1vw + 0.1rem, 1.25rem);
     line-height: 1.5;
     font-family: Roboto, Helvetica, Arial, sans-serif!;
-    background-color: #0fb06a;
+/* From https://css.glass */
+    background: #000000a3;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.7px);
+    -webkit-backdrop-filter: blur(5.7px);
+    border: 1px solid rgb(255, 255, 255);
+
+    color: #ffffff;
+    padding: 20px;
+    align-content: center;
+    text-align: left;
+    font-family: 'Arial Narrow Bold', sans-serif;
     
 }
 
-.captura{
-    max-height: 100%;
-    max-width: 100%;
-    justify-self: center;
-    align-self: center;
-}
 
-.ss-proyecto {
+.contenido-proyecto {
     grid-column: span 3 / span 3;
     grid-row: span 3 / span 3;
-    grid-column-start: 3;
+    grid-column-start: 2;
     grid-row-start: 3;
-    background-color: #e1387c;
+/* From https://css.glass */
+    background: #000000a3;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.7px);
+    -webkit-backdrop-filter: blur(5.7px);
+    border: 1px solid rgb(255, 255, 255);
+    padding: 20px;
+
 }
 
+.elemento{
+    flex: 1 0 auto;
+    background-color: #072879;
 
-
-/*Lógica de activación mediante pseudo-clase :has() - cambio de opacidad y visibilidad de las tarjetas al pasar el cursor sobre los edificios correspondientes*/
-.proyectos:has(.edificio-1:active) .card-1,
-.proyectos:has(.edificio-2:active) .card-2,
-.proyectos:has(.edificio-3:active) .card-3,
-.proyectos:has(.edificio-4:active) .card-4,
-.proyectos:has(.edificio-5:active) .card-5,
-.proyectos:has(.edificio-6:active) .card-6,
-.proyectos:has(.edificio-7:active) .rutta,
-.proyectos:has(.edificio-8:active) .card-8,
-.proyectos:has(.edificio-9:active) .card-9
-{
-    opacity: 1;
-    visibility: visible;
+    height: 100%;
 }
 
-
+.elemento img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
 
 /*? ================== PROYECTOS CON LEGO Querys===========================*/
 /*? ================== PROYECTOS CON LEGO Querys===========================*/
@@ -1270,239 +1317,413 @@ body {
 
 /*Media query para pantallas menores a 1200px - reducción del ancho del SVG y reajuste de dimensiones de todos los edificios*/
 @media (max-width: 1200px) {
+
+    .titulo{
+        font-size: 80px;
+        letter-spacing:30px;
+        text-align: center;
+    }
     .svg-lego {
-        width: 800px;
+        width: 80%;
     }
 
     .edificio-1 {
-        top: 17%;
-        left: 44%;
-        width: 110px;
-        height: 110px;
+        top: 29%;
+        left: 45%;
+        width: 80px;
+        height: 80px;
     }
 
     .edificio-2 {
-        top: 27%;
-        left: 57%;
-        width: 110px;
-        height: 110px;
+        top: 39%;
+        left: 58%;
+        width: 80px;
+        height: 80px;
     }
 
     .edificio-3 {
-        top: 37%;
-        left: 70%;
-        width: 110px;
-        height: 110px;
+        top: 49%;
+        left: 71%;
+        width: 80px;
+        height: 80px;
     }
 
     .edificio-4 {
-        top: 27%;
-        left: 31%;
-        width: 110px;
-        height: 110px;
+        top: 39%;
+        left: 33%;
+        width: 80px;
+        height: 80px;
     }
 
     .edificio-5 {
-        top: 37%;
-        left: 44%;
-        width: 110px;
-        height: 110px;
+        top: 49%;
+        left: 45%;
+        width: 80px;
+        height: 80px;
     }
 
     .edificio-6 {
-        top: 47%;
-        left: 57%;
-        width: 110px;
-        height: 110px;
+        top: 59%;
+        left: 58%;
+        width: 80px;
+        height: 80px;
     }
 
     .edificio-7 {
-        top: 37%;
-        left: 18%;
-        width: 110px;
-        height: 110px;
+        top: 49%;
+        left: 20%;
+        width: 80px;
+        height: 80px;
     }
 
     .edificio-8 {
-        top: 47%;
-        left: 31%;
-        width: 110px;
-        height: 110px;
+        top: 59%;
+        left: 33%;
+        width: 80px;
+        height: 80px;
     }
 
     .edificio-9 {
-        top: 57%;
-        left: 44%;
-        width: 110px;
-        height: 110px;
+        top: 69%;
+        left: 46%;
+        width: 80px;
+        height: 80px;
     }
 
+    .proyectoVisible{
+        height: 80%;
+        width: 95%;
+    }
+
+    .logo-proyecto {
+        width: 200px;
+    }
 }
 
 
 /* Vista para celular - reestructuración del contenedor principal en columna, ajuste de anchos máximos del formulario y conversión de la sección de proyectos creados a una cuadrícula (grid)*/
 @media (max-width: 991px) {
+
+    .titulo{
+        font-size: 50px;
+    }
+
     .proyectos {
+        display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
         height: auto;
-        gap: 300px;
         margin-bottom: 20px;
-
+        gap: 350px;
+        background-position: 50%;
     }
 
+    .svg-lego{
+        transform: translate(-50%, -35%);
+        width: 150%;
+    }
+
+        .edificio-1 {
+            top: 29%;
+            left: 45%;
+            width: 120px;
+            height: 120px;
+        }
+    
+        .edificio-2 {
+            top: 39%;
+            left: 58%;
+            width: 120px;
+            height: 120px;
+        }
+    
+        .edificio-3 {
+            top: 49%;
+            left: 71%;
+            width: 120px;
+            height: 120px;
+        }
+    
+        .edificio-4 {
+            top: 39%;
+            left: 33%;
+            width: 120px;
+            height: 120px;
+        }
+    
+        .edificio-5 {
+            top: 49%;
+            left: 45%;
+            width: 120px;
+            height: 120px;
+        }
+    
+        .edificio-6 {
+            top: 59%;
+            left: 58%;
+            width: 120px;
+            height: 120px;
+        }
+    
+        .edificio-7 {
+            top: 49%;
+            left: 20%;
+            width: 120px;
+            height: 120px;
+        }
+    
+        .edificio-8 {
+            top: 59%;
+            left: 33%;
+            width: 120px;
+            height: 120px;
+        }
+    
+        .edificio-9 {
+            top: 69%;
+            left: 46%;
+            width: 120px;
+            height: 120px;
+        }
+
     .form {
-        max-width: 200px;
+        width: 80%;
+        justify-self: center;
+        margin-left: 0px;
     }
 
     .created {
-        min-height: 400px;
-        width: 2000px;
+        width: 80%;
+        height: 300px;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
         gap: 10px;
+        margin-right: 0px;
+
     }
+
+    .car{
+        justify-self: center;
+        min-width: 175px;
+    }
+
+    .proyectoVisible {
+        height: 30%;
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+    }
+        
+        .imagen-proyecto {
+            height: 200px;
+        }
+
+        .encabezado-proyecto {
+            height: 200px;
+        }
+        
+        .contenido-proyecto {
+            height: 400px;
+        }
+
+
+
+
+
+}
+
 
     /*Media query para pantallas menores a 800px - reducción progresiva del tamaño del SVG y de las dimensiones de los edificios*/
-    @media (max-width: 800px) {
+@media (max-width: 800px) {
+
+        .titulo{
+            font-size: 30px;
+            letter-spacing: 15px;
+            height: 100px;
+            align-content: center;
+
+
+            justify-content: center;
+        }
+
+        .proyectos{
+            gap: 350;
+
         .svg-lego {
-            width: 600px;
+
+            width: 180%;
         }
 
         .edificio-1 {
-            top: 17%;
-            left: 44%;
-            width: 80px;
-            height: 80px;
+            top: 29%;
+            left: 46%;
+            width: 120px;
+            height: 120px;
         }
 
         .edificio-2 {
-            top: 27%;
-            left: 57%;
-            width: 80px;
-            height: 80px;
+            top: 39%;
+            left: 58%;
+            width: 120px;
+            height: 120px;
         }
 
         .edificio-3 {
-            top: 37%;
-            left: 70%;
-            width: 80px;
-            height: 80px;
+            top: 49%;
+            left: 71%;
+            width: 120px;
+            height: 120px;
         }
 
         .edificio-4 {
-            top: 27%;
-            left: 31%;
-            width: 80px;
-            height: 80px;
+            top: 39%;
+            left: 33%;
+            width: 120px;
+            height: 120px;
         }
 
         .edificio-5 {
-            top: 37%;
-            left: 44%;
-            width: 80px;
-            height: 80px;
+            top: 49%;
+            left: 46%;
+            width: 120px;
+            height: 120px;
         }
 
         .edificio-6 {
-            top: 47%;
-            left: 57%;
-            width: 80px;
-            height: 80px;
+            top: 59%;
+            left: 58%;
+            width: 120px;
+            height: 120px;
 
         }
 
         .edificio-7 {
-            top: 37%;
-            left: 18%;
-            width: 80px;
-            height: 80px;
+            top: 49%;
+            left: 20%;
+            width: 120px;
+            height: 120px;
         }
 
         .edificio-8 {
-            top: 47%;
-            left: 31%;
-            width: 80px;
-            height: 80px;
+            top: 59%;
+            left: 33%;
+            width: 120px;
+            height: 120px;
         }
 
         .edificio-9 {
-            top: 57%;
-            left: 44%;
-            width: 80px;
-            height: 80px;
+            top: 69%;
+            left: 45%;
+            width: 120px;
+            height: 120px;
         }
-    }
+
+        .car {
+            justify-self: center;
+            min-width: 125px;
+        }
+
+        .proyectoVisible {
+            height: 40%;
+            width: 95%;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+}
 
     /*Media query para pantallas menores a 600px - ajuste final mínimo para el ancho del SVG y mantenimiento de las dimensiones compactas de los edificios*/
-    @media (max-width: 600px) {
+
+@media (max-width: 600px) {
+
+    .proyectos{
+        gap: 200px;
+    }
+
+
         .svg-lego {
-            width: 350px;
+            width: 180%;
+            transform: translate(-50%, -59%);
         }
 
+        .created{
+            height: 600px;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+        }
+        .car{
+            width: 20px;
+            font-size: 8px;
+        }
+
+        
+        
         .edificio-1 {
-            top: 17%;
-            left: 44%;
-            width: 80px;
-            height: 80px;
+            top: 29%;
+            left: 45%;
+            width: 100px;
+            height: 100px;
         }
-
+        
         .edificio-2 {
-            top: 27%;
-            left: 57%;
-            width: 80px;
-            height: 80px;
+            top: 39%;
+            left: 58%;
+            width: 100px;
+            height: 100px;
         }
-
+        
         .edificio-3 {
-            top: 37%;
-            left: 70%;
-            width: 80px;
-            height: 80px;
+            top: 49%;
+            left: 71%;
+            width: 100px;
+            height: 100px;
         }
-
+        
         .edificio-4 {
-            top: 27%;
-            left: 31%;
-            width: 80px;
-            height: 80px;
+            top: 38%;
+            left: 33%;
+            width: 100px;
+            height: 100px;
         }
-
+        
         .edificio-5 {
-            top: 37%;
-            left: 44%;
-            width: 80px;
-            height: 80px;
+            top: 48%;
+            left: 46%;
+            width: 100px;
+            height: 100px;
         }
-
+        
         .edificio-6 {
-            top: 47%;
-            left: 57%;
-            width: 80px;
-            height: 80px;
+            top: 58%;
+            left: 58%;
+            width: 100px;
+            height: 100px;
         }
-
+        
         .edificio-7 {
-            top: 37%;
-            left: 18%;
-            width: 80px;
-            height: 80px;
+            top: 48%;
+            left: 20%;
+            width: 100px;
+            height: 100px;
         }
-
+        
         .edificio-8 {
-            top: 47%;
-            left: 31%;
-            width: 80px;
-            height: 80px;
+            top: 58%;
+            left: 33%;
+            width: 100px;
+            height: 100px;
         }
-
+        
         .edificio-9 {
-            top: 57%;
-            left: 44%;
-            width: 80px;
-            height: 80px;
+            top: 68%;
+            left: 46%;
+            width: 100px;
+            height: 100px;
         }
     }
 

@@ -321,7 +321,7 @@ const proyectosPortafolio = [
       "Esta sección esta en construcción, muy pronto subiré más proyectos",
   },
   {
-    imagen: `<img class="logo-proyecto" src="../assets/proyectos/hufflepuff/hufflepufflogo.png">`,
+    imagen: `<img class="logo-proyecto" src="./assets/proyectos/hufflepuff/hufflepufflogo.png">`,
     encabezado:
       "Desarrollado en equipo bajo metodología Scrum en un tiempo límite de 8 horas durante un hackathon de casas de Hogwarts (representando a Hufflepuff), este proyecto consiste en una plataforma web interactiva con implementación de carrito de compras para artículos de la casa. Fue construido de forma colaborativa con tecnologías web y se mantiene en constante evolución, con mejoras y nuevas características en camino.",
     contenido: `<div class="elemento"><img class="logo-proyecto" src="/assets/proyectos/hufflepuff/hufflepuff.png"></div>`,

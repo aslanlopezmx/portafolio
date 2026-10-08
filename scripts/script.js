@@ -314,7 +314,7 @@ carContainer.addEventListener("click", (e) => {
 
 const proyectosPortafolio = [
   {
-    imagen: `<img class="logo-proyecto" src="/assets/lego-construccion.jpg">`,
+    imagen: `<img class="logo-proyecto" src="./assets/lego-construccion.jpg">`,
     encabezado:
       "Esta sección esta en construcción, muy pronto subiré más proyectos",
     contenido:
@@ -327,49 +327,49 @@ const proyectosPortafolio = [
     contenido: `<div class="elemento"><img class="logo-proyecto" src="/assets/proyectos/hufflepuff/hufflepuff.png"></div>`,
   },
   {
-    imagen: `<img class="logo-proyecto" src="/assets/lego-construccion.jpg">`,
+    imagen: `<img class="logo-proyecto" src="./assets/lego-construccion.jpg">`,
     encabezado:
       "Esta sección esta en construcción, muy pronto subiré más proyectos",
     contenido:
       "Esta sección esta en construcción, muy pronto subiré más proyectos",
   },
   {
-    imagen: `<img class="logo-proyecto" src="/assets/lego-construccion.jpg">`,
+    imagen: `<img class="logo-proyecto" src="./assets/lego-construccion.jpg">`,
     encabezado:
       "Esta sección esta en construcción, muy pronto subiré más proyectos",
     contenido:
       "Esta sección esta en construcción, muy pronto subiré más proyectos",
   },
   {
-    imagen: `<img class="logo-proyecto" src="/assets/lego-construccion.jpg">`,
+    imagen: `<img class="logo-proyecto" src="./assets/lego-construccion.jpg">`,
     encabezado:
       "Esta sección esta en construcción, muy pronto subiré más proyectos",
     contenido:
       "Esta sección esta en construcción, muy pronto subiré más proyectos",
   },
   {
-    imagen: `<img class="logo-proyecto" src="/assets/lego-construccion.jpg">`,
+    imagen: `<img class="logo-proyecto" src="./assets/lego-construccion.jpg">`,
     encabezado:
       "Esta sección esta en construcción, muy pronto subiré más proyectos",
     contenido:
       "Esta sección esta en construcción, muy pronto subiré más proyectos",
   },
   {
-    imagen: `<img class="logo-proyecto" src="/assets/proyectos/rutta/rutta-iso.png">`,
+    imagen: `<img class="logo-proyecto" src="./assets/proyectos/rutta/rutta-iso.png">`,
     encabezado:
       "Rutta es una plataforma e-commerce y de comunidad para senderismo, desarrollada colaborativamente mediante la metodología Agile Scrum junto a mi equipo Trail Coders. Su propuesta de valor central es una guía experta integrada para la selección de equipo adaptada al nivel y dificultad de cada ruta. El proyecto destaca por su arquitectura robusta, una experiencia de usuario interactiva y optimizada para la conversión, y la resolución de necesidades técnicas reales del senderismo.",
     contenido: `
-                <div class="elemento"><img src="/assets/proyectos/rutta/ss3.png"></div>`,
+                <div class="elemento"><img src="./assets/proyectos/rutta/ss3.png"></div>`,
   },
   {
-    imagen: `<img class="logo-proyecto" src="/assets/lego-construccion.jpg">`,
+    imagen: `<img class="logo-proyecto" src="./assets/lego-construccion.jpg">`,
     encabezado:
       "Esta sección esta en construcción, muy pronto subiré más proyectos",
     contenido:
       "Esta sección esta en construcción, muy pronto subiré más proyectos",
   },
   {
-    imagen: `<img class="logo-proyecto" src="/assets/lego-construccion.jpg">`,
+    imagen: `<img class="logo-proyecto" src="./assets/lego-construccion.jpg">`,
     encabezado:
       "Esta sección esta en construcción, muy pronto subiré más proyectos",
     contenido:

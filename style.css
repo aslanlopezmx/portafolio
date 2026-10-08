@@ -916,17 +916,14 @@ body {
 
 
 .titulo{
-    background: linear-gradient(135deg, #010613, #14002d, #23020f, #09021d, #0a0017, #14002d, #03002d);
-    
+    background-color: #000000;
 
     position: relative;
 
     color: #ffffff;
     text-align: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 100px;
-    letter-spacing: 50px;
 
+    font-size: 70px;
 
     padding-top: 30px;
     padding-bottom: 30px;
@@ -936,20 +933,13 @@ body {
 /*Seccion que contiene formulario, svg, y divs de proyectos en estado invisible - altura, color de fondo, posicionamiento y reglas de distribución flexibles*/
 .proyectos {
     height: 750px;
-    background: linear-gradient(135deg, #010613, #14002d, #23020f, #09021d, #0a0017, #14002d, #03002d);
-
-
+    background-color: #000000;
     position: relative;
-
     justify-content: space-between;
-
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(6, 1fr);
-
     overflow: hidden;
-
-
 }
 
 /*Contenedor y lienzo SVG (Fondo) - posicionamiento absoluto centrado, ancho del lienzo y orden de apilamiento*/
@@ -966,7 +956,7 @@ body {
 
 /*Formulario y contenedor de tarjetas creadas - posicionamiento, dimensiones máximas/mínimas, márgenes, alineación de texto y diseño glassmorphism*/
 .form{
-    background-color: #dcdfe3;
+    background-color: #110442;
     grid-row: span 6 / span 6;
     border: 1px solid #000000;
     width: 250px;
@@ -976,6 +966,7 @@ body {
     align-content: center;
     z-index: 1;
     border-radius: 10px;
+    color: #ffffff;
 }
 
 /*Elementos internos del formulario - dirección flexible, alineación central, tamaño de fuente, alineación de texto y espacio entre elementos*/
@@ -1058,7 +1049,7 @@ body {
 
 /*Sección de elementos creados o lista de proyectos - diseño flexible en columna, alineación centrada y relleno interno*/
 .created {
-    background-color: #dcdfe3;
+    background-color: #110442;
     grid-row: span 6 / span 6;
     grid-column-start: 5;
     margin-top: 20px;
@@ -1084,6 +1075,7 @@ body {
 
 /*Tarjeta individual de proyecto creado - márgenes, dimensiones mínimas/máximas, bordes, estructura de cuadrícula (grid), tamaño de fuente, colores de fondo y texto*/
 .car {
+    background-color: #ffffff;
     margin-top: 10px;
     min-width: 200px;
     height: 45px;

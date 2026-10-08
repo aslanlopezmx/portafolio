@@ -159,7 +159,7 @@ body {
 
     /* menu desplegable - posicion absoluta inferior, oculto a la izquierda, ancho total, fondo, columna y transicion */
     .nav-links {
-       position: absolute;
+        position: absolute;
         top: 100%; 
         left: -120%;
         width: 100vw; 
@@ -599,7 +599,7 @@ body {
 /*Efecto de click para botones de flechas*/
 .arrowbtn:active{
     background-color: #d6d9dd;
-   box-shadow:
+    box-shadow:
     -5px -5px 10px #e9ecf0,
     5px 5px 20px #b2b8c0,
     inset -3px -3px 1px #6f71734f,
@@ -915,26 +915,16 @@ body {
 }
 
 
-
-
-/*Seccion en donde va el titulo - margen superior, color de fondo y altura del contenedor del título*/
-.titulo-proyectos {
-
-    background-color: #dcdfe3;
-
-
-
-}
-
 .titulo{
-    background-color: #dcdfe3;
+    background: linear-gradient(135deg, #010613, #14002d, #23020f, #09021d, #0a0017, #14002d, #03002d);
+    
 
+    position: relative;
 
     color: #ffffff;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 100px;
-    color: #ffffff;
     letter-spacing: 50px;
 
 
@@ -946,7 +936,9 @@ body {
 /*Seccion que contiene formulario, svg, y divs de proyectos en estado invisible - altura, color de fondo, posicionamiento y reglas de distribución flexibles*/
 .proyectos {
     height: 750px;
-    background-color: #1f1f1f;
+    background: linear-gradient(135deg, #010613, #14002d, #23020f, #09021d, #0a0017, #14002d, #03002d);
+
+
     position: relative;
 
     justify-content: space-between;
@@ -956,6 +948,7 @@ body {
     grid-template-rows: repeat(6, 1fr);
 
     overflow: hidden;
+
 
 }
 

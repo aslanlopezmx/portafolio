@@ -127,94 +127,95 @@
     <!--todo ================== PROYECTOS CON LEGO ===================-->
     <!--todo ================== PROYECTOS CON LEGO ===================-->
     <!--todo ================== PROYECTOS CON LEGO ===================-->
-<section>
-    <div class="info">?</div>
-    <div class="titulo-proyectos">
-      <div class="titulo">PROYECTOS</div>
-    </div>
-
-    <!--Seccion de formulario-->
-    <section class="proyectos">
-      <div class="svg-lego">
-        <svg id="city" class="lego-map" viewBox="-115 0 1200 750">
-          <g id="suelo"></g>
-          <g id="carros"></g>
-          <g id="edificios"></g>
-        </svg>
-
-        <div class="hitbox edificio-1"></div>
-        <div class="hitbox edificio-2"></div>
-        <div class="hitbox edificio-3"></div>
-        <div class="hitbox edificio-4"></div>
-        <div class="hitbox edificio-5"></div>
-        <div class="hitbox edificio-6"></div>
-        <div class="hitbox edificio-7"></div>
-        <div class="hitbox edificio-8"></div>
-        <div class="hitbox edificio-9"></div>
+    <section>
+      <div class="info">?</div>
+      <div class="titulo-proyectos">
+        <div class="titulo">PROYECTOS</div>
       </div>
 
-      <div class="form">
-        <form id="projectForm">
-          <label for="name">Nombre</label>
-          <div class="campo">
-            <select name="name" id="name">
-              <option value="McQueen">McQueen</option>
-              <option value="Herbie">Herbie</option>
-              <option value="Relámpago">Relámpago</option>
-              <option value="Carcacha">Carcacha</option>
-              <option value="DeLorean">DeLorean</option>
-              <option value="Bumblebee">Bumblebee</option>
-              <option value="Maquinon">Maquinon</option>
-              <option value="Jepetta">Jepetta</option>
-              <option value="Batimovil">Batimovil</option>
-              <option value="Rayo">Rayo</option>
-              <option value="Huracan">Huracan</option>
-              <option value="Guagua">Guagua</option>
-            </select>
-          </div>
+      <!--Seccion de formulario-->
+      <section class="proyectos">
+        <div class="svg-lego">
+          <svg id="city" class="lego-map" viewBox="-115 0 1200 750">
+            <g id="suelo"></g>
+            <g id="carros"></g>
+            <g id="edificios"></g>
+          </svg>
 
-          <label for="vehicle">Vehículo</label>
-          <div class="campo">
-            <select id="vehicle" name="vehicle" required>
-              <option value="Deportivo">Deportivo</option>
-              <option value="Sedan">Sedán</option>
-              <option value="Camioneta">Truck</option>
-              <option value="Mini">Mini</option>
-              <option value="Sub">Sub</option>
-              <option value="Clasico">Clásico</option>
-              <option value="Cubo">Cubo</option>
-              <option value="Bus">Bus</option>
-            </select>
-          </div>
+          <div class="hitbox edificio-1"></div>
+          <div class="hitbox edificio-2"></div>
+          <div class="hitbox edificio-3"></div>
+          <div class="hitbox edificio-4"></div>
+          <div class="hitbox edificio-5"></div>
+          <div class="hitbox edificio-6"></div>
+          <div class="hitbox edificio-7"></div>
+          <div class="hitbox edificio-8"></div>
+          <div class="hitbox edificio-9"></div>
+        </div>
 
-          <label for="speed">Velocidad</label>
-          <div class="campo">
-            <select id="speed" name="speed" required>
-              <option value="Lentisimo">Lentisimo</option>
-              <option value="Lento">Lento</option>
-              <option value="Normal">Media</option>
-              <option value="Rapido" selected>Rápido</option>
-              <option value="Rapidismo">Rapidisimo</option>
-            </select>
-          </div>
+        <div class="form">
+          <form id="projectForm">
+            <label for="name">Nombre</label>
+            <div class="campo">
+              <select name="name" id="name">
+                <option value="McQueen">McQueen</option>
+                <option value="Herbie">Herbie</option>
+                <option value="Relámpago">Relámpago</option>
+                <option value="Carcacha">Carcacha</option>
+                <option value="DeLorean">DeLorean</option>
+                <option value="Bumblebee">Bumblebee</option>
+                <option value="Maquinon">Maquinon</option>
+                <option value="Jepetta">Jepetta</option>
+                <option value="Batimovil">Batimovil</option>
+                <option value="Rayo">Rayo</option>
+                <option value="Huracan">Huracan</option>
+                <option value="Guagua">Guagua</option>
+              </select>
+            </div>
 
-          <label for="color">Color</label>
-          <div class="campo">
-            <input
-              type="color"
-              id="colorSelector"
-              name="color"
-              value="#d9382f"
-              required
-            />
-          </div>
-          <button type="submit" class="btn-enviar">Crear Vehículo</button>
-        </form>
-      </div>
+            <label for="vehicle">Vehículo</label>
+            <div class="campo">
+              <select id="vehicle" name="vehicle" required>
+                <option value="Deportivo">Deportivo</option>
+                <option value="Sedan">Sedán</option>
+                <option value="Camioneta">Truck</option>
+                <option value="Mini">Mini</option>
+                <option value="Sub">Sub</option>
+                <option value="Clasico">Clásico</option>
+                <option value="Cubo">Cubo</option>
+                <option value="Bus">Bus</option>
+              </select>
+            </div>
 
-      <div class="contenedorProyecto"></div>
+            <label for="speed">Velocidad</label>
+            <div class="campo">
+              <select id="speed" name="speed" required>
+                <option value="Lentisimo">Lentisimo</option>
+                <option value="Lento">Lento</option>
+                <option value="Normal">Media</option>
+                <option value="Rapido" selected>Rápido</option>
+                <option value="Rapidismo">Rapidisimo</option>
+              </select>
+            </div>
 
-      <div class="created"></div>
+            <label for="color">Color</label>
+            <div class="campo">
+              <input
+                type="color"
+                id="colorSelector"
+                name="color"
+                value="#d9382f"
+                required
+              />
+            </div>
+            <button type="submit" class="btn-enviar">Crear Vehículo</button>
+          </form>
+        </div>
+
+        <div class="contenedorProyecto"></div>
+
+        <div class="created"></div>
+      </section>
     </section>
 
     <!--todo ================== TRAYECTORIA ===================-->

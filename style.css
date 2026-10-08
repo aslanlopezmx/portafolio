@@ -896,7 +896,7 @@ body {
 .info::before{
     content: 'La siguiente seccion es interactiva, puedes conocer los proyectos en los que he estado involucrado haciendo click en los edificios. Para cerrar la ventana del proyecto solo vuelve a hacer click dentro de la seccion de legos. Finalmente, por pura diversión (y aprendizaje) diseñé una experiencia en la que puedes crear, editar y eliminar vehiculos personalizados que le darán vida a la ciudad';
     position: absolute;
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-size: clamp(.8rem, 1.5vw, 1.5rem);
     align-content: center;
     left: 5px;
     top: 5px;
@@ -946,7 +946,7 @@ body {
 /*Seccion que contiene formulario, svg, y divs de proyectos en estado invisible - altura, color de fondo, posicionamiento y reglas de distribución flexibles*/
 .proyectos {
     height: 750px;
-    background-color: #dcdfe3;
+    background-color: #1f1f1f;
     position: relative;
 
     justify-content: space-between;
@@ -962,7 +962,7 @@ body {
 /*Contenedor y lienzo SVG (Fondo) - posicionamiento absoluto centrado, ancho del lienzo y orden de apilamiento*/
 .svg-lego {
     position: absolute;
-    width: 100%;
+    width: 80%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -1043,8 +1043,6 @@ body {
     width: 50px;
 }
 
-
-
 /*Botón principal del formulario - margen superior para separación*/
 .btn-enviar{
     margin-top: 30px;
@@ -1053,6 +1051,16 @@ body {
     color: #ffffff;
     border-radius: 15px;
     cursor: pointer;
+    transition: all .2s ease;
+    background-color: #000000;
+}
+
+.btn-enviar:hover {
+    transform: scale(1.2);
+}
+
+.btn-delete:hover {
+    transform: scale(1.2);
 }
 
 /*Sección de elementos creados o lista de proyectos - diseño flexible en columna, alineación centrada y relleno interno*/
@@ -1121,10 +1129,21 @@ body {
     width: 90%;
     border: none;
 
-
-    background-color: #878787;
+    background-color: #000000;
     color: #ffffff;
     border-radius: 15px;
+
+    transition: all .2s ease;
+    transform: scale(1);
+}
+
+
+.btn-delete:hover{
+    transform: scale(1.2);
+}
+
+.btn-edit:hover {
+    transform: scale(1.2);
 }
 
 /*Áreas interactivas (hitboxes) sobre el mapa - posicionamiento absoluto, cursor de puntero, transformaciones geométricas de inclinación/rotación para simular isometría y borde temporal de calibración*/
@@ -1247,14 +1266,15 @@ body {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5.7px);
     -webkit-backdrop-filter: blur(5.7px);
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid rgba(255, 255, 255, 0.345);
 
     align-content: center;
     text-align: center;
+    padding: 10px;
 }
 
 .logo-proyecto {
-    width: 400px;
+    width: 300px;
 }
 
 .encabezado-proyecto {
@@ -1270,7 +1290,7 @@ body {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5.7px);
     -webkit-backdrop-filter: blur(5.7px);
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid rgba(255, 255, 255, 0.345);
 
     color: #ffffff;
     padding: 20px;
@@ -1292,7 +1312,7 @@ body {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5.7px);
     -webkit-backdrop-filter: blur(5.7px);
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid rgba(255, 255, 255, 0.345);
     padding: 20px;
 
 }
@@ -1520,6 +1540,10 @@ body {
             height: 200px;
         }
 
+        .logo-proyecto {
+            width: 115px;
+        }
+
         .encabezado-proyecto {
             height: 200px;
         }
@@ -1659,6 +1683,12 @@ body {
         .car{
             width: 20px;
             font-size: 8px;
+        }
+
+        .btn-edit,
+        .btn-delete {
+            font-size: 10px;
+
         }
 
         

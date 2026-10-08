@@ -30,7 +30,6 @@ const aboutMe = [
 ];
 
 /*Seleccion de elementos en el DOM (html), querySelector hace referencia a una clase perteneciente al html, el contenido entre paréntesis es el nombre de la clase y va entre comiilas */
-
 const elFirst = document.querySelector(".first");
 const elContent = document.querySelector(".content");
 const elGuide = document.querySelector(".guide");
@@ -315,51 +314,66 @@ carContainer.addEventListener("click", (e) => {
 
 const proyectosPortafolio = [
   {
-    imagen: "",
-    encabezado: "0",
-    contenido: "0",
+    imagen: `<img class="logo-proyecto" src="/assets/lego-construccion.jpg">`,
+    encabezado:
+      "Esta sección esta en construcción, muy pronto subiré más proyectos",
+    contenido:
+      "Esta sección esta en construcción, muy pronto subiré más proyectos",
   },
   {
-    imagen: "1",
-    encabezado: "1",
-    contenido: "1",
+    imagen: `<img class="logo-proyecto" src="/assets/proyectos/hufflepuff/hufflepufflogo.png">`,
+    encabezado:
+      "Desarrollado en equipo bajo metodología Scrum en un tiempo límite de 8 horas durante un hackathon de casas de Hogwarts (representando a Hufflepuff), este proyecto consiste en una plataforma web interactiva con implementación de carrito de compras para artículos de la casa. Fue construido de forma colaborativa con tecnologías web y se mantiene en constante evolución, con mejoras y nuevas características en camino.",
+    contenido: `<div class="elemento"><img class="logo-proyecto" src="/assets/proyectos/hufflepuff/hufflepuff.png"></div>`,
   },
   {
-    imagen: "2",
-    encabezado: "2",
-    contenido: "2",
+    imagen: `<img class="logo-proyecto" src="/assets/lego-construccion.jpg">`,
+    encabezado:
+      "Esta sección esta en construcción, muy pronto subiré más proyectos",
+    contenido:
+      "Esta sección esta en construcción, muy pronto subiré más proyectos",
   },
   {
-    imagen: "3",
-    encabezado: "3",
-    contenido: "3",
+    imagen: `<img class="logo-proyecto" src="/assets/lego-construccion.jpg">`,
+    encabezado:
+      "Esta sección esta en construcción, muy pronto subiré más proyectos",
+    contenido:
+      "Esta sección esta en construcción, muy pronto subiré más proyectos",
   },
   {
-    imagen: "4",
-    encabezado: "4",
-    contenido: "4",
+    imagen: `<img class="logo-proyecto" src="/assets/lego-construccion.jpg">`,
+    encabezado:
+      "Esta sección esta en construcción, muy pronto subiré más proyectos",
+    contenido:
+      "Esta sección esta en construcción, muy pronto subiré más proyectos",
   },
   {
-    imagen: "5",
-    encabezado: "5",
-    contenido: "5",
+    imagen: `<img class="logo-proyecto" src="/assets/lego-construccion.jpg">`,
+    encabezado:
+      "Esta sección esta en construcción, muy pronto subiré más proyectos",
+    contenido:
+      "Esta sección esta en construcción, muy pronto subiré más proyectos",
   },
   {
     imagen: `<img class="logo-proyecto" src="/assets/proyectos/rutta/rutta-iso.png">`,
     encabezado:
-      "Rutta es una plataforma e-commerce y de comunidad para senderismo, desarrollada colaborativamente mediante la metodología Scrum Agile junto a mi equipo Trail Coders. Su propuesta de valor central es una guía experta integrada para la selección de equipo adaptada al nivel y dificultad de cada ruta. El proyecto destaca por su arquitectura robusta, una experiencia de usuario interactiva y optimizada para la conversión, y la resolución de necesidades técnicas reales del excursionismo.",
+      "Rutta es una plataforma e-commerce y de comunidad para senderismo, desarrollada colaborativamente mediante la metodología Agile Scrum junto a mi equipo Trail Coders. Su propuesta de valor central es una guía experta integrada para la selección de equipo adaptada al nivel y dificultad de cada ruta. El proyecto destaca por su arquitectura robusta, una experiencia de usuario interactiva y optimizada para la conversión, y la resolución de necesidades técnicas reales del senderismo.",
     contenido: `
-                <div class="elemento"><img src="/assets/proyectos/rutta/ss2.png"></div>`,
+                <div class="elemento"><img src="/assets/proyectos/rutta/ss3.png"></div>`,
   },
   {
-    imagen: "7",
-    encabezado: "7",
-    contenido: "7",
+    imagen: `<img class="logo-proyecto" src="/assets/lego-construccion.jpg">`,
+    encabezado:
+      "Esta sección esta en construcción, muy pronto subiré más proyectos",
+    contenido:
+      "Esta sección esta en construcción, muy pronto subiré más proyectos",
   },
   {
-    imagen: "8",
-    encabezado: "8",
-    contenido: "8",
+    imagen: `<img class="logo-proyecto" src="/assets/lego-construccion.jpg">`,
+    encabezado:
+      "Esta sección esta en construcción, muy pronto subiré más proyectos",
+    contenido:
+      "Esta sección esta en construcción, muy pronto subiré más proyectos",
   },
 ];
 const seccionProyectos = document.querySelector(".proyectos");

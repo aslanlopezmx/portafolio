@@ -1,6 +1,6 @@
 /* ================= LEGOS - FORMULAS PARA VECTOR EN SVG ==================*/
 // 1. Configuración de dimensiones y proyección isométrica
-// Valores OX y OY modificados para centrar la cámara al nuevo origen 0,0
+
 const C = 19,
   H = 23,
   OX = 492,
@@ -66,7 +66,6 @@ const bricks = (list) =>
 /* ================= LEGOS - ¡¡¡ FABRICA DE BLOQUES LEGO !!! ==================*/
 
 // 5. Arreglo de piezas a dibujar:
-// Coordenadas remapeadas (x + 7, y + 15) para iniciar en 0, 0
 //todo =====       [x(\), y(/), z(|), ancho(X), profundidad(Y), color, altura, mostrar_STUDS]
 const miSet = [
   /*Placa base */
@@ -303,40 +302,54 @@ const miSet = [
 
   /*  Edificios (agrupados en esta direccion    \\\    )*/
   /*\\\3*/
-  [5, 5, -6.7, 1, 1, "#5a3a14", 1, true],
-  [5, 5, -5.7, 1, 1, "#2c7c21", 1, true],
-  [5, 7, -6.7, 1, 1, "#5a3a14", 1, true],
-  [5, 7, -5.7, 1, 1, "#2c7c21", 1, true],
-  [7, 5, -6.7, 2, 2, "#d0c766", 1, true],
-  [7, 5, -5.7, 2, 2, "#d0c766", 1, true],
-  [7, 5, -4.7, 2, 2, "#934141", 0.3, false],
-  [7, 7, -6.7, 2, 2, "#d0c766", 1, true],
-  [7, 7, -5.7, 2, 2, "#934141", 0.3, false],
+  [5, 5, -6.7, 1, 1, "#8b5a2b", 1, true],
+  [5, 5, -5.7, 1, 1, "#43b531", 1, true],
+  [5, 7, -6.7, 1, 1, "#8b5a2b", 1, true],
+  [5, 7, -5.7, 1, 1, "#43b531", 1, true],
+  [7, 5, -6.7, 2, 2, "#fceb5b", 1, true],
+  [7, 5, -5.7, 2, 2, "#fceb5b", 1, true],
+  [7, 5, -4.7, 2, 2, "#e84141", 0.3, false],
+  [7, 7, -6.7, 2, 2, "#fceb5b", 1, true],
+  [7, 7, -5.7, 2, 2, "#e84141", 0.3, false],
 
-  [13, 5, -6.7, 4, 4, "#404040", 1, true],
-  [13, 5, -5.7, 4, 4, "#b9c7d6", 1, true],
-  [13, 5, -4.7, 3, 3, "#b9c7d6", 1, true],
-  [13, 5, -3.7, 3, 3, "#8fa3bb", 1, true],
-  [13, 5, -2.7, 2, 2, "#8fa3bb", 1, true],
-  [13, 5, -1.7, 2, 2, "#5d6f87", 1, true],
-  [13, 5, -0.7, 1, 1, "#d9382f", 1, true],
+  [13, 5, -6.7, 2, 2, "#e1c86c", 1, true],
+  [13, 5, -5.7, 2, 2, "#e1c86c", 1, true],
+  [13, 5, -4.7, 2, 2, "#364469", 0.3, false],
+  [13.5, 5.5, -4.4, 1, 1, "#364469", 1, true],
+  [15, 5, -6.7, 2, 1, "#e1c86c", 1, true],
+  [16, 5, -5.7, 1, 1, "#e1c86c", 1, true],
+  [16, 5, -4.7, 1, 1, "#364469", 0.3, true],
+  [14, 7, -6.7, 1, 2, "#e1c86c", 1, true],
+  [14, 8, -5.7, 1, 1, "#e1c86c", 1, true],
+  [14, 8, -4.7, 1, 1, "#364469", 0.3, true],
+  [16, 6, -6.7, 1, 2, "#e1c86c", 0.3, false],
+  [16, 8, -6.7, 1, 1, "#e1c86c", 1, true],
+  [16, 8, -5.7, 1, 1, "#364469", 0.3, true],
 
-  [21, 5, -6.7, 3, 4, "#404040", 1, true],
-  [21, 5, -5.7, 3, 2, "#737373", 1, true],
-  [21, 5, -4.7, 2, 2, "#aeaeae", 1, true],
-  [21, 5, -3.7, 2, 2, "#e8e8e8", 1, true],
+  [21, 5, -6.7, 1, 3, "#eaddcf", 1, true],
+  [22, 5, -6.7, 1, 1, "#5a3a14", 1, false],
+  [22, 6, -6.7, 1, 2, "#eaddcf", 1, true],
+  [23, 5, -6.7, 1, 3, "#eaddcf", 1, true],
+  [21, 5, -5.7, 3, 3, "#8b3a3a", 0.6, true],
+  [22, 6, -5.1, 1, 1, "#eaddcf", 1, true],
+  [22, 6, -4.1, 1, 1, "#8b3a3a", 1, true],
+  [22, 6, -3.1, 1, 1, "#e1c86c", 1, true],
+  [24, 6, -6.7, 1, 1, "#5a3a14", 1, false],
+  [24, 6, -5.7, 1, 1, "#2c7c21", 1, true],
+  [24, 6, -4.7, 1, 1, "#2c7c21", 1, true],
 
   /*  Edificios (agrupados en esta direccion    \\\    )*/
   /*\\2\*/
-  [5, 13, -6.7, 2, 4, "#daffff", 1, true],
-  [7, 13, -6.7, 2, 2, "#daffff", 1, true],
-  [5, 13, -5.7, 4, 2, "#9ec7c7", 1, true],
-  [5, 13, -4.7, 2, 2, "#9ca2a2", 0.3, false],
-  [7, 13, -4.7, 2, 2, "#daffff", 1, true],
-  [7, 13, -3.7, 2, 2, "#daffff", 1, true],
-  [7, 13, -2.7, 1, 2, "#daffff", 1, true],
-  [8, 13, -2.7, 1, 2, "#b5bebe", 0.3, false],
-  [7, 15, -6.7, 1, 1, "#e3d10a", 1, true],
+  [5, 13, -6.7, 4, 4, "#404040", 1, true],
+  [5, 13, -5.7, 1, 1, "#2c7c21", 1, true],
+  [8, 13, -5.7, 1, 1, "#2c7c21", 1, true],
+  [5, 16, -5.7, 1, 1, "#2c7c21", 1, true],
+  [8, 16, -5.7, 1, 1, "#2c7c21", 1, true],
+  [6, 14, -5.7, 2, 2, "#9ec7c7", 1, true],
+  [6, 14, -4.7, 2, 2, "#daffff", 1, true],
+  [6, 14, -3.7, 2, 2, "#9ec7c7", 1, true],
+  [6, 14, -2.7, 2, 2, "#daffff", 1, false],
+  [6.5, 14.5, -1.7, 1, 1, "#d4433c", 1, true],
 
   [13, 13, -6.7, 4, 1, "#4d4d4d", 0.3, true],
   [13, 14, -6.7, 1, 2, "#4d4d4d", 0.3, true],
@@ -359,37 +372,42 @@ const miSet = [
 
   /*  Edificios (agrupados en esta direccion    \\\    )*/
   /*\1\\*/
-  [6, 22, -6.7, 2, 2, "#4aa3df", 0.3, false],
-  [6, 24, -6.7, 2, 1, "#7a5230", 0.3, true],
-  [5, 21, -6.7, 1, 1, "#5a3a14", 1, true],
-  [5, 21, -5.7, 1, 1, "#2c7c21", 1, true],
-  [5, 21, -4.7, 1, 1, "#3a9a2c", 1, true],
-  [8, 21, -6.7, 1, 1, "#5a3a14", 1, true],
-  [8, 21, -5.7, 1, 1, "#2c7c21", 1, true],
-  [8, 21, -4.7, 1, 1, "#3a9a2c", 1, true],
+  [5, 21, -6.7, 4, 2, "#6f747c", 1, true],
+  [5, 21, -5.7, 4, 2, "#8c929b", 1, true],
+  [6, 21, -4.7, 2, 1, "#8c929b", 1, true],
+  [6, 21, -3.7, 1, 1, "#f5f5f5", 0.3, false],
+  [6, 23, -6.7, 1, 1, "#7fc4ee", 1, true],
+  [6, 23, -5.7, 1, 1, "#7fc4ee", 0.3, false],
+  [7, 23, -5.7, 1, 1, "#8c929b", 0.3, false],
+  [5, 23, -6.7, 1, 1, "#5a3a14", 1, false],
+  [5, 23, -5.7, 1, 1, "#2c7c21", 1, true],
+  [5, 23, -4.7, 1, 1, "#3a9a2c", 1, true],
+  [8, 23, -6.7, 1, 1, "#5a3a14", 1, false],
+  [8, 23, -5.7, 1, 1, "#1f6b2a", 1, true],
+  [7, 23, -6.7, 1, 1, "#8c929b", 1, true],
+  [5, 24, -6.7, 4, 1, "#4aa3df", 0.3, false],
+  [8, 24, -6.7, 1, 1, "#4aa3df", 0.3, false],
 
-  [13, 21, -6.7, 4, 2, "#4b6fa5", 1, true],
-  [13, 21, -5.7, 4, 2, "#4b6fa5", 1, true],
-  [13, 21, -4.7, 4, 2, "#6d8fc7", 1, true],
-  [13, 21, -3.7, 4, 2, "#2f4f7f", 0.3, false],
-  [13, 23, -6.7, 2, 2, "#4b6fa5", 1, true],
-  [13, 23, -5.7, 2, 2, "#6d8fc7", 1, true],
-  [13, 23, -4.7, 2, 2, "#2f4f7f", 0.3, false],
-  [15, 23, -6.7, 2, 1, "#d9d9d9", 0.3, true],
+  [13, 21, -6.7, 4, 2, "#c0281f", 1, true],
+  [13, 21, -5.7, 4, 2, "#a82219", 1, true],
+  [13, 21, -4.7, 4, 2, "#f2f2f2", 0.3, true],
+  [16, 21, -4.4, 1, 1, "#c0281f", 1, true],
+  [16, 21, -3.4, 1, 1, "#a82219", 1, true],
+  [16, 21, -2.4, 1, 1, "#f2c230", 0.3, true],
+  [13, 23, -6.7, 2, 2, "#d42b20", 1, true],
+  [13, 23, -5.7, 1, 1, "#f2f2f2", 0.3, true],
+  [15, 23, -6.7, 2, 1, "#f2c230", 1, true],
+  [15, 24, -6.7, 2, 1, "#e0b020", 0.6, true],
 
-  [21, 21, -6.7, 2, 2, "#e1c86c", 1, true],
-  [21, 21, -5.7, 2, 2, "#e1c86c", 1, true],
-  [21, 21, -4.7, 2, 2, "#364469", 0.3, false],
-  [21.5, 21.5, -4.4, 1, 1, "#364469", 1, true],
-  [23, 21, -6.7, 2, 1, "#e1c86c", 1, true],
-  [24, 21, -5.7, 1, 1, "#e1c86c", 1, true],
-  [24, 21, -4.7, 1, 1, "#364469", 0.3, true],
-  [22, 23, -6.7, 1, 2, "#e1c86c", 1, true],
-  [22, 24, -5.7, 1, 1, "#e1c86c", 1, true],
-  [22, 24, -4.7, 1, 1, "#364469", 0.3, true],
-  [24, 22, -6.7, 1, 2, "#e1c86c", 0.3, false],
-  [24, 24, -6.7, 1, 1, "#e1c86c", 1, true],
-  [24, 24, -5.7, 1, 1, "#364469", 0.3, true],
+  [21, 21, -6.7, 4, 2, "#ffd23f", 1, false],
+  [21, 23, -6.7, 1, 1, "#ffd23f", 1, false],
+  [22, 23, -6.7, 2, 1, "#1f6fd1", 1, false],
+  [24, 23, -6.7, 1, 1, "#ffd23f", 1, false],
+  [21, 21, -5.7, 4, 3, "#d4433c", 1, true],
+  [22, 24, -6.7, 2, 1, "#f2f2f2", 0.3, true],
+  [21, 24, -6.7, 1, 1, "#2fbf4a", 1, true],
+  [24, 24, -6.7, 1, 1, "#5a3a14", 1, false],
+  [24, 24, -5.7, 1, 1, "#22b14c", 1, true],
 ];
 
 /* ================= LEGOS - VEHÍCULOS ==================*/
@@ -404,48 +422,46 @@ const OSCURO = "#2b2e33",
 const CHASIS = [-1, 1, -0.5, 0.5, 0, 0.3, OSCURO]; // placa oscura de 2x1 (las "ruedas")
 
 const MODELOS = {
-  // Sedán: cuerpo de 2x1 + techo blanco 1x1 en la parte de atrás
   Sedan: [
     CHASIS,
     [-1, 1, -0.5, 0.5, 0.3, 0.3, null, false],
     [-0.5, 0.5, -0.5, 0.5, 0.6, 0.3, null, false],
   ],
-  // Deportivo: bajo y plano
+
   Deportivo: [
     CHASIS,
     [-1.25, 1, -0.5, 0.5, 0.3, 0.3, null, false],
     [-0.75, 0.25, 0.5, -0.5, 0.6, 0.3, null, false],
     [-1.25, -1, 0.5, -0.5, 0.6, 0.3, OSCURO, false],
   ],
-  // Camioneta: cabina adelante + caja amarilla atrás, sobre una placa
+
   Camioneta: [
     CHASIS,
     [-1, 1, -0.5, 0.5, 0.3, 0.3, null, false],
     [0, 1, -0.5, 0.5, 0.6, 0.3, null, false],
   ],
 
-  // mini: cabina de placa centrada
   Mini: [
     CHASIS,
     [-1, 1, -0.5, 0.5, 0.3, 0.3, null, false],
     [-0.75, 0.25, -0.5, 0.5, 0.6, 0.3, BLANCO, false],
   ],
-  // coupe: cabina centrada y parabrisas negro
+
   Sub: [
     CHASIS,
     [-1, 1, -0.5, 0.5, 0.3, 0.3, null, false],
     [-0.5, 0.5, -0.5, 0.5, 0.6, 0.3, null, false],
     [-0.5, -1, -0.5, 0.5, 0.6, 0.3, "#000000", false],
   ],
-  // clasico: cabina atrás y parabrisas negro adelante
+
   Clasico: [
     CHASIS,
     [-1.25, 1, -0.5, 0.5, 0.3, 0.3, null, true],
     [-1, 0, -0.5, 0.5, 0.6, 0.3, OSCURO, false],
   ],
-  // cubo: cuerpo alto con techo blanco atrás
+
   Cubo: [[-1, 0, -0.5, 0.5, 0, 0.9, null, false]],
-  // pickup: 3 de largo, cabina adelante y caja con carga atrás
+
   Bus: [
     [-1.5, 1.5, -0.5, 0.5, 0, 0.3, OSCURO],
     [-1.5, 1.5, -0.5, 0.5, 0.3, 0.3, null, false],
@@ -478,10 +494,7 @@ function carBricks(tipo, color, [dx, dy]) {
 }
 
 /* ================= LEGOS - CAPAS: SUELO Y EDIFICIOS ==================*/
-// Sin tocar miSet: lo que está en z <= -7 es suelo (placa, zonas, banquetas, calles)
-// y lo que está más arriba son edificios, árboles, estanques...
 const suelo = miSet.filter((b) => b[2] <= -7);
 const edificios = miSet.filter((b) => b[2] > -7);
 
-/* ====== Y REEMPLAZA tu línea de export por esta ====== */
 export { bricks, miSet, suelo, edificios, carBricks, C };

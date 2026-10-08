@@ -1,5 +1,5 @@
 /* ================= TRÁFICO - MOVIMIENTO ALEATORIO DE LOS CARROS ==================*/
-// Va en la misma carpeta que lego.js y script.js
+
 import { carBricks, C } from "./lego.js";
 
 const capaCarros = document.querySelector("#carros");
